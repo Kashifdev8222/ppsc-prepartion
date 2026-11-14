@@ -39,3 +39,19 @@ export function initials(name) {
   if (!parts.length) return '?'
   return parts.slice(0, 2).map((w) => w[0]).join('').toUpperCase()
 }
+
+// Deterministic shuffle — same seed (e.g. today's date) gives the same questions all day
+export function seededPick(arr, seed, n) {
+  const out = [...arr]
+  let s = 0
+  for (let i = 0; i < String(seed).length; i++) s = (s * 31 + String(seed).charCodeAt(i)) >>> 0
+  const rnd = () => {
+    s = (s * 1103515245 + 12345) >>> 0
+    return s / 4294967296
+  }
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out.slice(0, n)
+}

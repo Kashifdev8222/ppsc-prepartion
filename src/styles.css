@@ -427,6 +427,30 @@ body {
 .slot-card b { font-size: 0.85rem; display: block; line-height: 1.3; }
 .slot-card .muted { font-size: 0.72rem; display: block; }
 
+/* ---------- practice sessions (dashboard short sessions) ---------- */
+.practice-session {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fafbfe;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.practice-session summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.practice-session summary::-webkit-details-marker { display: none; }
+.practice-session summary:hover { background: #f3f4f9; }
+.practice-session[open] { background: #fff; border-color: #c7d2fe; }
+.practice-body { padding: 4px 14px 14px; border-top: 1px dashed var(--line); }
+.practice-body ul { margin: 6px 0 0 18px; font-size: 0.9rem; }
+.mini-q { margin: 12px 0 4px; }
+.practice-body .opt { font-size: 0.9rem; }
+
 /* ---------- full-day plan (inside lesson page) ---------- */
 .dayplan-list { display: flex; flex-direction: column; gap: 6px; }
 .dayplan-row {
