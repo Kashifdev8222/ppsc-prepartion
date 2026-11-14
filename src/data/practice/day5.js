@@ -1,0 +1,88 @@
+export const practiceDay5 = {
+  1: {
+    5: {
+      english: {
+        title: 'Antonyms — opposite meaning',
+        concept: [
+          'An **antonym** is a word with the OPPOSITE meaning.',
+          'Learn them in pairs: hot ↔ cold, easy ↔ difficult, always ↔ never, day ↔ night, rich ↔ poor.',
+          'Exam trick: if two options are similar to each other, the answer is usually the one that is truly opposite.',
+        ],
+        qs: [
+          { q: 'The antonym of "hot" is:', options: ['warm', 'cold', 'cool', 'fire'], answer: 1, explain: 'Hot ↔ cold. Warm and cool are milder forms.' },
+          { q: 'The antonym of "easy" is:', options: ['simple', 'difficult', 'soft', 'clear'], answer: 1, explain: 'Easy ↔ difficult.' },
+          { q: 'The antonym of "always" is:', options: ['never', 'often', 'sometimes', 'forever'], answer: 0, explain: 'Always ↔ never.' },
+          { q: 'The antonym of "day" is:', options: ['morning', 'night', 'noon', 'evening'], answer: 1, explain: 'Day ↔ night.' },
+          { q: 'The antonym of "up" is:', options: ['above', 'down', 'high', 'over'], answer: 1, explain: 'Up ↔ down.' },
+          { q: 'The antonym of "rich" is:', options: ['wealthy', 'poor', 'happy', 'strong'], answer: 1, explain: 'Rich ↔ poor.' },
+          { q: 'The antonym of "open" is:', options: ['shut', 'wide', 'free', 'clear'], answer: 0, explain: 'Open ↔ shut / closed.' },
+          { q: 'The antonym of "come" is:', options: ['arrive', 'go', 'enter', 'return'], answer: 1, explain: 'Come ↔ go.' },
+          { q: 'The antonym of "wet" is:', options: ['damp', 'dry', 'rainy', 'cold'], answer: 1, explain: 'Wet ↔ dry.' },
+          { q: 'The antonym of "young" is:', options: ['new', 'old', 'small', 'fresh'], answer: 1, explain: 'Young ↔ old.' },
+        ],
+      },
+      pakgk: {
+        title: 'World general knowledge',
+        concept: [
+          '**United Nations (UN):** headquarters **New York**, about 193 member countries. Security Council has **5 permanent members**.',
+          '**Continents (7):** Asia (largest), Africa, Europe, North America, South America, Australia (Oceania), Antarctica.',
+          'Largest country by area: **Russia**. Most populous country: **India**. Largest ocean: **Pacific**.',
+          '**OIC** (Organization of Islamic Cooperation) was founded in **1969**; Pakistan is a founding member. **Red Cross** was founded by Henry Dunant.',
+        ],
+        qs: [
+          { q: 'The headquarters of the United Nations is in:', options: ['Geneva', 'New York', 'London', 'Paris'], answer: 1, explain: 'UN headquarters: New York, USA.' },
+          { q: 'Which is the largest ocean on Earth?', options: ['Atlantic', 'Indian', 'Pacific', 'Arctic'], answer: 2, explain: 'The Pacific is the largest and deepest ocean.' },
+          { q: 'The currency of Pakistan is the:', options: ['Dollar', 'Rupee', 'Riyal', 'Dinar'], answer: 1, explain: 'Pakistani Rupee (PKR).' },
+          { q: 'How many continents are there on Earth?', options: ['5', '6', '7', '8'], answer: 2, explain: 'Seven: Asia, Africa, Europe, North America, South America, Australia, Antarctica.' },
+          { q: 'Which is the largest country in the world by area?', options: ['China', 'USA', 'Russia', 'Canada'], answer: 2, explain: 'Russia — about 17 million square km.' },
+          { q: 'Which is the most populous country in the world?', options: ['China', 'India', 'USA', 'Indonesia'], answer: 1, explain: 'India passed China in population in 2023.' },
+          { q: 'Which is the largest continent?', options: ['Africa', 'Asia', 'Europe', 'North America'], answer: 1, explain: 'Asia is the largest and most populous continent.' },
+          { q: 'How many permanent members does the UN Security Council have?', options: ['3', '5', '7', '10'], answer: 1, explain: 'Five: USA, UK, Russia, China, France.' },
+          { q: 'Who founded the Red Cross?', options: ['Henry Dunant', 'Florence Nightingale', 'Woodrow Wilson', 'Dag Hammarskjöld'], answer: 0, explain: 'Henry Dunant founded the Red Cross in 1863.' },
+          { q: 'The OIC (Organization of Islamic Cooperation) was founded in:', options: ['1947', '1969', '1979', '1990'], answer: 1, explain: 'OIC founded in 1969 at Rabat; Pakistan is a founding member.' },
+        ],
+      },
+      math: {
+        title: 'Fractions',
+        concept: [
+          'A fraction has a **numerator** (top) and **denominator** (bottom).',
+          '**Adding fractions:** make denominators equal first — 1/2 + 1/3 = 3/6 + 2/6 = 5/6.',
+          '**Simplifying:** divide top and bottom by the same number — 2/4 = 1/2, 5/10 = 1/2.',
+          '**Comparing:** bigger denominator (bottom) = smaller piece — 1/2 is bigger than 1/3.',
+        ],
+        qs: [
+          { q: '1/3 of 90 = ?', options: ['20', '30', '40', '45'], answer: 1, explain: '90 ÷ 3 = 30.' },
+          { q: 'The simplest form of 2/4 is:', options: ['1/4', '1/2', '2/2', '4/2'], answer: 1, explain: 'Divide top and bottom by 2.' },
+          { q: '1/2 + 1/3 = ?', options: ['2/5', '2/6', '5/6', '1/6'], answer: 2, explain: '3/6 + 2/6 = 5/6.' },
+          { q: '1/4 of 100 = ?', options: ['20', '25', '40', '50'], answer: 1, explain: '100 ÷ 4 = 25.' },
+          { q: '3/5 of 50 = ?', options: ['20', '25', '30', '35'], answer: 2, explain: '50 ÷ 5 = 10, then 10 × 3 = 30.' },
+          { q: '2/3 of 90 = ?', options: ['30', '45', '60', '75'], answer: 2, explain: '90 ÷ 3 = 30, then 30 × 2 = 60.' },
+          { q: '1/2 + 1/2 = ?', options: ['2/4', '1', '1/4', '2/2 only'], answer: 1, explain: '1/2 + 1/2 = 2/2 = 1.' },
+          { q: '1/8 of 64 = ?', options: ['6', '8', '10', '12'], answer: 1, explain: '64 ÷ 8 = 8.' },
+          { q: 'The simplest form of 5/10 is:', options: ['5/5', '1/2', '1/5', '10/5'], answer: 1, explain: 'Divide top and bottom by 5 → 1/2.' },
+          { q: 'Which fraction is bigger?', options: ['1/4', '1/3', '1/5', '1/6'], answer: 1, explain: 'Smaller denominator = bigger piece: 1/3 > 1/4.' },
+        ],
+      },
+      computer: {
+        title: 'MS Office',
+        concept: [
+          '**MS Word** = documents and letters (.docx). **MS Excel** = spreadsheets, tables and formulas (.xlsx). **MS PowerPoint** = presentations (.pptx).',
+          '**Outlook** = email. **Access** = databases.',
+          'Formatting shortcuts: **Ctrl+B** bold · **Ctrl+I** italic · **Ctrl+P** print.',
+        ],
+        qs: [
+          { q: 'Which MS Office program is used for documents?', options: ['Excel', 'Word', 'PowerPoint', 'Access'], answer: 1, explain: 'MS Word = documents and letters.' },
+          { q: 'Which MS Office program is used for spreadsheets and calculations?', options: ['Word', 'Excel', 'PowerPoint', 'Outlook'], answer: 1, explain: 'MS Excel = tables and formulas.' },
+          { q: 'Which MS Office program is used for presentations?', options: ['Word', 'Excel', 'Access', 'PowerPoint'], answer: 3, explain: 'MS PowerPoint = slides.' },
+          { q: 'Which program is used for email?', options: ['Outlook', 'Excel', 'Word', 'PowerPoint'], answer: 0, explain: 'MS Outlook manages email.' },
+          { q: 'Which file extension belongs to MS Excel?', options: ['.docx', '.xlsx', '.pptx', '.txt'], answer: 1, explain: '.xlsx = Excel workbook.' },
+          { q: 'The shortcut for BOLD text is:', options: ['Ctrl+B', 'Ctrl+I', 'Ctrl+U', 'Ctrl+P'], answer: 0, explain: 'Ctrl+B = bold.' },
+          { q: 'The shortcut for printing is:', options: ['Ctrl+S', 'Ctrl+P', 'Ctrl+N', 'Ctrl+F'], answer: 1, explain: 'Ctrl+P = print.' },
+          { q: 'Which program is BEST for a salary sheet with formulas?', options: ['Word', 'Excel', 'PowerPoint', 'Paint'], answer: 1, explain: 'Excel is built for tables and formulas.' },
+          { q: 'Which file extension belongs to a PowerPoint presentation?', options: ['.docx', '.xlsx', '.pptx', '.pdf'], answer: 2, explain: '.pptx = PowerPoint.' },
+          { q: 'The shortcut for ITALIC text is:', options: ['Ctrl+B', 'Ctrl+I', 'Ctrl+Z', 'Ctrl+A'], answer: 1, explain: 'Ctrl+I = italic.' },
+        ],
+      },
+    },
+  },
+}

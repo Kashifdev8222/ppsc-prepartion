@@ -3,6 +3,15 @@ import { CheckCircle2, XCircle } from 'lucide-react'
 
 const letters = ['a', 'b', 'c', 'd']
 
+export function Rich({ text }) {
+  const parts = String(text).split('**')
+  return (
+    <>
+      {parts.map((p, i) => (i % 2 === 1 ? <strong key={i}>{p}</strong> : <span key={i}>{p}</span>))}
+    </>
+  )
+}
+
 export function PracticeSession({ icon: Icon, title, minutes, children }) {
   return (
     <details className="practice-session">

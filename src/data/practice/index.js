@@ -1,4 +1,4 @@
-const modules = import.meta.glob('./week*.js', { eager: true })
+const modules = import.meta.glob('./day*.js', { eager: true })
 
 export const practice = {}
 
@@ -6,7 +6,11 @@ for (const path of Object.keys(modules)) {
   const mod = modules[path]
   for (const key of Object.keys(mod)) {
     const val = mod[key]
-    if (val && typeof val === 'object') Object.assign(practice, val)
+    if (val && typeof val === 'object') {
+      Object.keys(val).forEach((wk) => {
+        practice[wk] = { ...(practice[wk] || {}), ...val[wk] }
+      })
+    }
   }
 }
 

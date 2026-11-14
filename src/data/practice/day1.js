@@ -1,0 +1,88 @@
+export const practiceDay1 = {
+  1: {
+    1: {
+      english: {
+        title: 'Articles — a, an, the',
+        concept: [
+          'Use **a / an** for ONE thing — not specific, or mentioned for the first time: "I saw **a** man."',
+          '**a** comes before a consonant sound: a book, a car, a university (yu-ni-ver-si-ty starts with a "y" sound).',
+          '**an** comes before a vowel sound: an apple, an hour (the h is silent), an MPA (em-pee-ay).',
+          '**the** is used for something specific, already known, or unique: "**The** sun", "**The** Indus", "**The** Quran".',
+        ],
+        qs: [
+          { q: '"He is ___ honest man." Which article fits?', options: ['a', 'an', 'the', 'no article'], answer: 1, explain: '"honest" starts with a vowel SOUND (silent h), so "an".' },
+          { q: '"___ Indus is the longest river in Pakistan."', options: ['A', 'An', 'The', 'No article'], answer: 2, explain: 'Rivers and unique things take "the": the Indus, the moon.' },
+          { q: '"I saw ___ eagle in the sky."', options: ['a', 'an', 'the', 'no article'], answer: 1, explain: '"eagle" starts with a vowel sound, so "an".' },
+          { q: '"I bought ___ apple and ___ banana."', options: ['a, an', 'an, a', 'the, a', 'an, an'], answer: 1, explain: 'apple → an (vowel sound), banana → a (consonant sound).' },
+          { q: '"___ sun rises in the east."', options: ['A', 'An', 'The', 'No article'], answer: 2, explain: 'The sun is unique — always "the sun".' },
+          { q: '"She is ___ university student."', options: ['a', 'an', 'the', 'no article'], answer: 0, explain: '"university" sounds like "yoo-niversity" — a consonant sound, so "a".' },
+          { q: '"He waited for ___ hour."', options: ['a', 'an', 'the', 'no article'], answer: 1, explain: '"hour" has a silent h — it sounds like "our", so "an hour".' },
+          { q: '"___ Quran is a holy book."', options: ['A', 'An', 'The', 'No article'], answer: 2, explain: 'Unique holy books take "the": the Quran, the Bible.' },
+          { q: '"There is ___ book on the table. ___ book is red."', options: ['a, The', 'an, The', 'the, A', 'a, A'], answer: 0, explain: 'First mention = "a". Second time (already known) = "The".' },
+          { q: '"He is ___ MPA from Lahore."', options: ['a', 'an', 'the', 'no article'], answer: 1, explain: '"MPA" is pronounced "em-pee-ay" — vowel sound, so "an".' },
+        ],
+      },
+      pakgk: {
+        title: 'Pakistan — basic facts',
+        concept: [
+          'Pakistan came into being on **14 August 1947**. Founder: **Quaid-e-Azam Muhammad Ali Jinnah**.',
+          'Capital: **Islamabad**. Four provinces: **Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan**.',
+          'National language: **Urdu**. Official language: **English**.',
+          'National poet: **Allama Iqbal** · National game: **Hockey** · National flower: **Jasmine** · National animal: **Markhor** · National bird: **Chukar**.',
+        ],
+        qs: [
+          { q: 'What is the capital of Pakistan?', options: ['Karachi', 'Islamabad', 'Lahore', 'Peshawar'], answer: 1, explain: 'Islamabad is the capital. Karachi was the first capital after independence.' },
+          { q: 'What is the national language of Pakistan?', options: ['Urdu', 'Punjabi', 'English', 'Sindhi'], answer: 0, explain: 'Urdu is the national language; English is the official language.' },
+          { q: 'Who is the national poet of Pakistan?', options: ['Allama Iqbal', 'Hafeez Jalandhari', 'Faiz Ahmed Faiz', 'Mirza Ghalib'], answer: 0, explain: 'Allama Iqbal — the poet of the 1930 Allahabad Address.' },
+          { q: 'Who is the founder of Pakistan?', options: ['Allama Iqbal', 'Quaid-e-Azam Muhammad Ali Jinnah', 'Liaquat Ali Khan', 'Sir Syed Ahmed Khan'], answer: 1, explain: 'Quaid-e-Azam Muhammad Ali Jinnah is the founder of Pakistan.' },
+          { q: 'How many provinces does Pakistan have?', options: ['3', '4', '5', '6'], answer: 1, explain: 'Four: Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan.' },
+          { q: 'What is the national flower of Pakistan?', options: ['Rose', 'Jasmine', 'Tulip', 'Sunflower'], answer: 1, explain: 'Jasmine (Chambeli) is the national flower.' },
+          { q: 'What is the national game of Pakistan?', options: ['Cricket', 'Hockey', 'Kabaddi', 'Football'], answer: 1, explain: 'Hockey is the national game of Pakistan.' },
+          { q: 'Who wrote the national anthem of Pakistan?', options: ['Allama Iqbal', 'Hafeez Jalandhari', 'Faiz Ahmed Faiz', 'Josh Malihabadi'], answer: 1, explain: 'The anthem was written by Hafeez Jalandhari in 1952.' },
+          { q: 'What is the national animal of Pakistan?', options: ['Lion', 'Snow leopard', 'Markhor', 'Deer'], answer: 2, explain: 'The Markhor is Pakistan’s national animal.' },
+          { q: 'What is the national bird of Pakistan?', options: ['Eagle', 'Chukar', 'Parrot', 'Falcon'], answer: 1, explain: 'The Chukar (Chakor) partridge is the national bird.' },
+        ],
+      },
+      math: {
+        title: 'Basic operations & fractions',
+        concept: [
+          'Follow the **BODMAS rule**: solve in this order — Brackets, Orders (powers), Division, Multiplication, Addition, Subtraction.',
+          'A **fraction** is a part of a whole: 1/2 means one part out of two equal parts. Top = numerator, bottom = denominator.',
+          '**Percentage** means "out of 100": 25% = 25/100 = 1/4. So 25% of a number = one quarter of it.',
+        ],
+        qs: [
+          { q: 'What is 25% of 200?', options: ['25', '50', '75', '100'], answer: 1, explain: '25% = 1/4, and 200 ÷ 4 = 50.' },
+          { q: '125 + 75 − 40 = ?', options: ['150', '160', '170', '180'], answer: 1, explain: '125 + 75 = 200, then 200 − 40 = 160.' },
+          { q: '1/2 + 1/4 = ?', options: ['1/6', '2/4', '3/4', '1/3'], answer: 2, explain: '1/2 = 2/4, so 2/4 + 1/4 = 3/4.' },
+          { q: '150 ÷ 3 × 2 = ?', options: ['25', '100', '150', '50'], answer: 1, explain: 'Left to right: 150 ÷ 3 = 50, then 50 × 2 = 100.' },
+          { q: '18 + 6 ÷ 3 = ?', options: ['8', '20', '24', '12'], answer: 1, explain: 'BODMAS — divide first: 6 ÷ 3 = 2, then 18 + 2 = 20.' },
+          { q: '2/5 of 100 = ?', options: ['20', '40', '50', '25'], answer: 1, explain: '100 ÷ 5 = 20, then 20 × 2 = 40.' },
+          { q: '1000 − 465 = ?', options: ['535', '545', '635', '525'], answer: 0, explain: '1000 − 400 = 600, 600 − 65 = 535.' },
+          { q: '3/4 is equal to which percentage?', options: ['25%', '50%', '75%', '34%'], answer: 2, explain: '3/4 × 100 = 75%.' },
+          { q: '45 × 11 = ?', options: ['495', '485', '505', '450'], answer: 0, explain: '45 × 10 = 450, plus 45 = 495.' },
+          { q: '0.5 is equal to which fraction?', options: ['1/4', '1/2', '1/5', '5/10 only'], answer: 1, explain: '0.5 = 5/10 = 1/2 (simplest form).' },
+        ],
+      },
+      computer: {
+        title: 'Computer fundamentals',
+        concept: [
+          'A computer works in three steps: **Input → Process → Output**. You type (input), the CPU works (process), the screen shows (output).',
+          '**Hardware** = physical parts you can touch (keyboard, CPU, monitor). **Software** = programs (Windows, MS Word).',
+          '**CPU** (Central Processing Unit) = the brain of the computer. **RAM** = temporary working memory. **Hard disk** = permanent storage.',
+        ],
+        qs: [
+          { q: 'What does CPU stand for?', options: ['Central Processing Unit', 'Computer Personal Unit', 'Central Program Utility', 'Control Processing Unit'], answer: 0, explain: 'CPU = Central Processing Unit — the brain of the computer.' },
+          { q: 'Which of these is an input device?', options: ['Monitor', 'Printer', 'Keyboard', 'Speaker'], answer: 2, explain: 'Keyboard sends data INTO the computer. Monitor, printer and speaker are output.' },
+          { q: '1 kilobyte (KB) equals:', options: ['100 bytes', '1000 bytes', '1024 bytes', '512 bytes'], answer: 2, explain: 'In computing, 1 KB = 1024 bytes (2 to the power 10).' },
+          { q: 'Which part is called the brain of the computer?', options: ['RAM', 'CPU', 'Hard disk', 'Monitor'], answer: 1, explain: 'The CPU processes everything — the brain.' },
+          { q: 'Which memory loses its data when the power goes off?', options: ['RAM', 'ROM', 'Hard disk', 'USB'], answer: 0, explain: 'RAM is temporary (volatile) memory.' },
+          { q: 'Which memory is permanent and read-only?', options: ['RAM', 'ROM', 'Cache', 'Register'], answer: 1, explain: 'ROM = Read Only Memory — permanent.' },
+          { q: 'Which of these is an output device?', options: ['Mouse', 'Scanner', 'Printer', 'Keyboard'], answer: 2, explain: 'Printer gives output on paper.' },
+          { q: 'Which of these is software?', options: ['Keyboard', 'MS Word', 'Monitor', 'CPU'], answer: 1, explain: 'MS Word is a program (software). The others are hardware.' },
+          { q: 'What is the smallest unit of data?', options: ['Byte', 'Bit', 'KB', 'MB'], answer: 1, explain: 'A bit is the smallest unit — one 0 or 1.' },
+          { q: '1 byte equals how many bits?', options: ['4', '8', '16', '32'], answer: 1, explain: '1 byte = 8 bits.' },
+        ],
+      },
+    },
+  },
+}

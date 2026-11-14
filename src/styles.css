@@ -450,6 +450,17 @@ body {
 .practice-body ul { margin: 6px 0 0 18px; font-size: 0.9rem; }
 .mini-q { margin: 12px 0 4px; }
 .practice-body .opt { font-size: 0.9rem; }
+.concept-box {
+  background: #f3f4f9;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+.concept-box p { margin-bottom: 6px; }
+.concept-box p:last-child { margin-bottom: 0; }
+.concept-title { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* ---------- full-day plan (inside lesson page) ---------- */
 .dayplan-list { display: flex; flex-direction: column; gap: 6px; }

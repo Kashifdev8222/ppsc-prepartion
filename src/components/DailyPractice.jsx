@@ -1,9 +1,22 @@
 import { BookOpen, Globe2, Calculator, Monitor, Newspaper, History, ClipboardList } from 'lucide-react'
-import { PracticeSession, MiniQuiz } from './PracticeSession.jsx'
+import { PracticeSession, MiniQuiz, Rich } from './PracticeSession.jsx'
 import { getPractice, currentAffairsSession } from '../data/practice/index.js'
 import { lessons } from '../data/index.js'
 import { todayStr, seededPick } from '../utils.js'
 import { enrichedDays } from '../data/plan.js'
+
+function ConceptBox({ items }) {
+  return (
+    <div className="concept-box">
+      <p className="concept-title">Read first — understand the concept</p>
+      {items.map((c, i) => (
+        <p key={i}>
+          <Rich text={c} />
+        </p>
+      ))}
+    </div>
+  )
+}
 
 export default function DailyPractice({ day, state }) {
   if (!day) return null
@@ -29,7 +42,8 @@ export default function DailyPractice({ day, state }) {
         Steps 2–7 — your six short sessions
       </h2>
       <p className="muted">
-        Quick sessions with instant checking. Only the daily quiz (step 1) is saved to your permanent record.
+        Each session: read the concept first, then answer 10 questions with instant checking. Only the daily quiz (step
+        1) is saved to your permanent record.
       </p>
 
       {day.isTest ? (
@@ -39,15 +53,19 @@ export default function DailyPractice({ day, state }) {
       ) : practicePack ? (
         <div className="mt">
           <PracticeSession icon={BookOpen} title={practicePack.english.title} minutes={25}>
+            <ConceptBox items={practicePack.english.concept} />
             <MiniQuiz qs={practicePack.english.qs} sid="eng" />
           </PracticeSession>
           <PracticeSession icon={Globe2} title={practicePack.pakgk.title} minutes={20}>
+            <ConceptBox items={practicePack.pakgk.concept} />
             <MiniQuiz qs={practicePack.pakgk.qs} sid="gk" />
           </PracticeSession>
           <PracticeSession icon={Calculator} title={practicePack.math.title} minutes={20}>
+            <ConceptBox items={practicePack.math.concept} />
             <MiniQuiz qs={practicePack.math.qs} sid="math" />
           </PracticeSession>
           <PracticeSession icon={Monitor} title={practicePack.computer.title} minutes={20}>
+            <ConceptBox items={practicePack.computer.concept} />
             <MiniQuiz qs={practicePack.computer.qs} sid="comp" />
           </PracticeSession>
         </div>

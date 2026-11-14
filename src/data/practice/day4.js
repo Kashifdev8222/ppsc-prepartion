@@ -1,0 +1,87 @@
+export const practiceDay4 = {
+  1: {
+    4: {
+      english: {
+        title: 'Synonyms — same meaning',
+        concept: [
+          'A **synonym** is a word with the SAME (or nearly the same) meaning.',
+          'Learn them in pairs: big = large, quick = fast, begin = start, happy = glad, brave = courageous.',
+          'Exam trick: replace the word in your head — "The task was hard" → hard = difficult.',
+        ],
+        qs: [
+          { q: 'The synonym of "big" is:', options: ['small', 'large', 'tiny', 'short'], answer: 1, explain: 'Big = large. Small and tiny are antonyms.' },
+          { q: 'The synonym of "quick" is:', options: ['slow', 'fast', 'late', 'lazy'], answer: 1, explain: 'Quick = fast.' },
+          { q: 'The synonym of "begin" is:', options: ['end', 'stop', 'start', 'finish'], answer: 2, explain: 'Begin = start.' },
+          { q: 'The synonym of "happy" is:', options: ['sad', 'glad', 'angry', 'tired'], answer: 1, explain: 'Happy = glad.' },
+          { q: 'The synonym of "small" is:', options: ['large', 'huge', 'tiny', 'big'], answer: 2, explain: 'Small = tiny.' },
+          { q: 'The synonym of "brave" is:', options: ['cowardly', 'courageous', 'weak', 'shy'], answer: 1, explain: 'Brave = courageous.' },
+          { q: 'The synonym of "intelligent" is:', options: ['foolish', 'clever', 'slow', 'lazy'], answer: 1, explain: 'Intelligent = clever.' },
+          { q: 'The synonym of "error" is:', options: ['success', 'mistake', 'victory', 'progress'], answer: 1, explain: 'Error = mistake.' },
+          { q: 'The synonym of "assist" is:', options: ['block', 'help', 'stop', 'delay'], answer: 1, explain: 'Assist = help.' },
+          { q: 'The synonym of "finish" is:', options: ['start', 'complete', 'begin', 'open'], answer: 1, explain: 'Finish = complete.' },
+        ],
+      },
+      pakgk: {
+        title: 'Rivers of Pakistan',
+        concept: [
+          'Longest river of Pakistan: **Indus** — flows into the **Arabian Sea**. It is called the lifeline of Sindh.',
+          'The **five rivers of Punjab**: Jhelum, Chenab, Ravi, Sutlej, Beas.',
+          '**Ravi** flows through **Lahore**. **Tarbela Dam** is on the Indus, **Mangla Dam** on the Jhelum.',
+          'The Indus originates in **Tibet**, near Lake Mansarovar.',
+        ],
+        qs: [
+          { q: 'Which is the longest river of Pakistan?', options: ['Ravi', 'Indus', 'Jhelum', 'Kabul'], answer: 1, explain: 'The Indus — it ends in the Arabian Sea.' },
+          { q: 'Which river flows through Lahore?', options: ['Indus', 'Ravi', 'Chenab', 'Sutlej'], answer: 1, explain: 'The Ravi flows through Lahore.' },
+          { q: 'Which river is called the lifeline of Sindh?', options: ['Ravi', 'Indus', 'Kabul', 'Sutlej'], answer: 1, explain: 'The Indus irrigates most of Sindh.' },
+          { q: 'How many rivers are counted among the five rivers of Punjab?', options: ['4', '5', '6', '3'], answer: 1, explain: 'Five: Jhelum, Chenab, Ravi, Sutlej, Beas.' },
+          { q: 'The Mangla Dam is built on which river?', options: ['Indus', 'Jhelum', 'Ravi', 'Chenab'], answer: 1, explain: 'Mangla Dam is on the Jhelum.' },
+          { q: 'The Tarbela Dam is built on which river?', options: ['Indus', 'Jhelum', 'Ravi', 'Sutlej'], answer: 0, explain: 'Tarbela — one of the largest earth-filled dams — is on the Indus.' },
+          { q: 'Which of these is a river of Punjab?', options: ['Kabul', 'Chenab', 'Hub', 'Lyari'], answer: 1, explain: 'Chenab is one of the five rivers of Punjab.' },
+          { q: 'Which of these is NOT one of the five rivers of Punjab?', options: ['Jhelum', 'Chenab', 'Ravi', 'Indus'], answer: 3, explain: 'The five are Jhelum, Chenab, Ravi, Sutlej and Beas — the Indus is counted separately.' },
+          { q: 'The Indus River originates from:', options: ['Karakoram', 'Tibet', 'Himalayas of Nepal', 'Iran'], answer: 1, explain: 'The Indus starts in Tibet, near Lake Mansarovar.' },
+          { q: 'The Beas River flows through which part?', options: ['Punjab', 'Sindh', 'Balochistan', 'KPK only'], answer: 0, explain: 'Beas is the easternmost of the five rivers of Punjab.' },
+        ],
+      },
+      math: {
+        title: 'Averages',
+        concept: [
+          '**Average = total sum ÷ number of items.**',
+          'Example: average of 10, 20, 30 → (10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.',
+          'Reverse trick: **total = average × number of items.** Average of 5 items is 20 → total = 100.',
+        ],
+        qs: [
+          { q: 'The average of 10, 20 and 30 is:', options: ['15', '20', '25', '30'], answer: 1, explain: '(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.' },
+          { q: 'The average of 4, 6 and 8 is:', options: ['5', '6', '7', '8'], answer: 1, explain: '(4 + 6 + 8) ÷ 3 = 18 ÷ 3 = 6.' },
+          { q: 'A player scores 50, 60 and 70. The average is:', options: ['55', '60', '65', '70'], answer: 1, explain: '(50 + 60 + 70) ÷ 3 = 180 ÷ 3 = 60.' },
+          { q: 'The average of 5, 10, 15 and 20 is:', options: ['10', '12', '12.5', '15'], answer: 2, explain: '(5 + 10 + 15 + 20) ÷ 4 = 50 ÷ 4 = 12.5.' },
+          { q: 'The average of 2, 4, 6, 8 and 10 is:', options: ['5', '6', '7', '8'], answer: 1, explain: 'Total 30 ÷ 5 = 6.' },
+          { q: 'The average of 5 items is 20. What is the total?', options: ['80', '100', '120', '25'], answer: 1, explain: 'Total = average × count = 20 × 5 = 100.' },
+          { q: 'The average of 100 and 200 is:', options: ['150', '120', '180', '160'], answer: 0, explain: '(100 + 200) ÷ 2 = 150.' },
+          { q: 'The average of 0 and 10 is:', options: ['0', '5', '10', '2'], answer: 1, explain: '(0 + 10) ÷ 2 = 5.' },
+          { q: 'A batsman scores 80, 90 and 100. The average is:', options: ['85', '90', '95', '100'], answer: 1, explain: '(80 + 90 + 100) ÷ 3 = 270 ÷ 3 = 90.' },
+          { q: 'The average of 1, 2, 3, 4 and 5 is:', options: ['2', '3', '4', '5'], answer: 1, explain: 'Total 15 ÷ 5 = 3.' },
+        ],
+      },
+      computer: {
+        title: 'Operating systems & shortcuts',
+        concept: [
+          'The **operating system (OS)** manages the whole computer. Examples: **Windows, macOS, Linux, Android**.',
+          'Programs like MS Word run ON TOP of the OS — they cannot work without it.',
+          'Key shortcuts: **Ctrl+C** copy · **Ctrl+V** paste · **Ctrl+X** cut · **Ctrl+Z** undo · **Ctrl+S** save · **F1** help.',
+        ],
+        qs: [
+          { q: 'Which of these is an operating system?', options: ['MS Word', 'Windows', 'Chrome', 'Photoshop'], answer: 1, explain: 'Windows is an OS; the others are programs that run on an OS.' },
+          { q: 'The shortcut to copy selected text is:', options: ['Ctrl+C', 'Ctrl+V', 'Ctrl+X', 'Ctrl+Z'], answer: 0, explain: 'Ctrl+C = copy.' },
+          { q: 'Which key deletes the character to the LEFT of the cursor?', options: ['Delete', 'Backspace', 'Esc', 'Tab'], answer: 1, explain: 'Backspace deletes left; Delete removes right.' },
+          { q: 'Which of these is an operating system for phones?', options: ['Android', 'Excel', 'Chrome', 'PowerPoint'], answer: 0, explain: 'Android is the most common phone OS.' },
+          { q: 'The shortcut to paste is:', options: ['Ctrl+P', 'Ctrl+V', 'Ctrl+C', 'Ctrl+B'], answer: 1, explain: 'Ctrl+V = paste.' },
+          { q: 'The shortcut to undo is:', options: ['Ctrl+Z', 'Ctrl+Y', 'Ctrl+U', 'Ctrl+D'], answer: 0, explain: 'Ctrl+Z = undo.' },
+          { q: 'The shortcut to save a file is:', options: ['Ctrl+P', 'Ctrl+S', 'Ctrl+A', 'Ctrl+F'], answer: 1, explain: 'Ctrl+S = save.' },
+          { q: 'Which file extension belongs to MS Word documents?', options: ['.xlsx', '.docx', '.pptx', '.jpg'], answer: 1, explain: '.docx = Word document.' },
+          { q: 'Which key opens Help in most programs?', options: ['F1', 'F5', 'F12', 'Esc'], answer: 0, explain: 'F1 is the standard Help key.' },
+          { q: 'macOS is the operating system of which company?', options: ['Microsoft', 'Apple', 'Google', 'IBM'], answer: 1, explain: 'macOS is made by Apple.' },
+        ],
+      },
+    },
+  },
+}

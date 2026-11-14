@@ -1,0 +1,87 @@
+export const practiceDay3 = {
+  1: {
+    3: {
+      english: {
+        title: 'Pronouns — the basics',
+        concept: [
+          '**Subject pronouns** DO the action: I, we, you, he, she, it, they. — "**She** reads."',
+          '**Object pronouns** RECEIVE the action: me, us, you, him, her, it, them. — "The officer called **him**."',
+          '**Possessive** shows ownership: my/mine, your/yours, his, her/hers, its, our/ours, their/theirs. — "This is **my** file. The file is **mine**."',
+          '**Reflexive** ends in -self/-selves: myself, yourself, himself, herself, itself, ourselves, themselves. — "He hurt **himself**."',
+        ],
+        qs: [
+          { q: '"The officer called ___." (talking about Ali)', options: ['he', 'him', 'his', 'himself'], answer: 1, explain: 'Object position after the verb → "him".' },
+          { q: '"This pen is ___." (it belongs to me)', options: ['my', 'mine', 'me', 'I'], answer: 1, explain: 'Possessive pronoun stands alone — "mine".' },
+          { q: '"___ are going to the station." (Ali and I)', options: ['Me', 'We', 'Us', 'They'], answer: 1, explain: 'Ali and I = we (subject form).' },
+          { q: 'Which word is a subject pronoun? "___ reads the newspaper daily."', options: ['Him', 'Her', 'She', 'Them'], answer: 2, explain: 'Subject position (the doer) → "She".' },
+          { q: '"Please help ___ with this work." (us)', options: ['we', 'us', 'our', 'ours'], answer: 1, explain: 'Object position after the verb → "us".' },
+          { q: '"This is ___ house." (their house)', options: ['they', 'them', 'their', 'theirs'], answer: 2, explain: 'Before a noun → possessive adjective "their".' },
+          { q: '"He hurt ___ while playing."', options: ['himself', 'hisself', 'him', 'his'], answer: 0, explain: 'Reflexive — the action returns to the subject: himself.' },
+          { q: '"I saw ___ at the market." (her)', options: ['she', 'her', 'hers', 'herself'], answer: 1, explain: 'Object position after the verb → "her".' },
+          { q: '"The dog wagged ___ tail."', options: ['it', 'its', "it's", 'itself'], answer: 1, explain: 'Possessive for things/animals = "its" (no apostrophe).' },
+          { q: '"___ am a student of BS IT."', options: ['Me', 'I', 'My', 'Mine'], answer: 1, explain: 'Subject of the sentence → "I".' },
+        ],
+      },
+      pakgk: {
+        title: 'Provinces of Pakistan',
+        concept: [
+          'Pakistan has **4 provinces**: Punjab (capital **Lahore**), Sindh (**Karachi**), Khyber Pakhtunkhwa (**Peshawar**), Balochistan (**Quetta**).',
+          'Largest by **area**: Balochistan. Largest by **population**: Punjab. Largest **city**: Karachi.',
+          '**Islamabad** is the capital — a federal territory, not a province. **Gilgit-Baltistan** also has a special status, not a full province.',
+        ],
+        qs: [
+          { q: 'How many provinces does Pakistan have?', options: ['3', '4', '5', '6'], answer: 1, explain: 'Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan.' },
+          { q: 'Which is the largest province of Pakistan by area?', options: ['Punjab', 'Sindh', 'Khyber Pakhtunkhwa', 'Balochistan'], answer: 3, explain: 'Balochistan is the largest by area.' },
+          { q: 'What is the capital of Punjab?', options: ['Lahore', 'Karachi', 'Peshawar', 'Quetta'], answer: 0, explain: 'Lahore — Pakistan’s second-largest city.' },
+          { q: 'What is the capital of Sindh?', options: ['Lahore', 'Karachi', 'Hyderabad', 'Sukkur'], answer: 1, explain: 'Karachi — also Pakistan’s largest city.' },
+          { q: 'What is the capital of Khyber Pakhtunkhwa?', options: ['Lahore', 'Karachi', 'Peshawar', 'Quetta'], answer: 2, explain: 'Peshawar.' },
+          { q: 'What is the capital of Balochistan?', options: ['Lahore', 'Karachi', 'Peshawar', 'Quetta'], answer: 3, explain: 'Quetta.' },
+          { q: 'Which province is the largest by population?', options: ['Punjab', 'Sindh', 'Khyber Pakhtunkhwa', 'Balochistan'], answer: 0, explain: 'Punjab has the largest population.' },
+          { q: 'What is the status of Islamabad?', options: ['A province', 'A federal capital territory', 'Part of Punjab', 'A district of KP'], answer: 1, explain: 'Islamabad is the federal capital — a separate territory.' },
+          { q: 'Which is the largest city of Pakistan by population?', options: ['Lahore', 'Karachi', 'Islamabad', 'Faisalabad'], answer: 1, explain: 'Karachi — the biggest city and economic hub.' },
+          { q: 'Gilgit-Baltistan is:', options: ['A province', 'A region with special status', 'Part of Kashmir', 'A district of Punjab'], answer: 1, explain: 'GB is administered by Pakistan with special status — not a full province.' },
+        ],
+      },
+      math: {
+        title: 'Percentages',
+        concept: [
+          '**Percent** means "per 100": 10% of 350 = 350 × 10/100 = 35.',
+          'Quick values: **50% = half**, **25% = quarter**, **75% = three-quarters**, **10% = divide by 10**.',
+          '**Convert fraction → percent:** multiply by 100. 1/4 → 25%, 1/2 → 50%. **Decimal → percent:** multiply by 100. 0.5 → 50%.',
+        ],
+        qs: [
+          { q: '10% of 350 = ?', options: ['30', '35', '40', '25'], answer: 1, explain: '350 × 10/100 = 35.' },
+          { q: '50% of 90 = ?', options: ['40', '45', '50', '55'], answer: 1, explain: 'Half of 90 is 45.' },
+          { q: 'A 20% increase on Rs. 500 is:', options: ['Rs. 100', 'Rs. 120', 'Rs. 80', 'Rs. 50'], answer: 0, explain: '20% of 500 = 500 × 20/100 = 100.' },
+          { q: '5% of 200 = ?', options: ['5', '10', '15', '20'], answer: 1, explain: '200 × 5/100 = 10.' },
+          { q: '75% of 400 = ?', options: ['200', '250', '300', '350'], answer: 2, explain: '75% = 3/4, and 400 ÷ 4 × 3 = 300.' },
+          { q: '1/4 is equal to which percentage?', options: ['20%', '25%', '40%', '50%'], answer: 1, explain: '1/4 × 100 = 25%.' },
+          { q: '0.5 is equal to which percentage?', options: ['5%', '50%', '0.5%', '500%'], answer: 1, explain: '0.5 × 100 = 50%.' },
+          { q: '150% of 100 = ?', options: ['150', '100', '50', '250'], answer: 0, explain: '100 × 150/100 = 150.' },
+          { q: '15% of 300 = ?', options: ['30', '45', '50', '60'], answer: 1, explain: '300 × 15/100 = 45.' },
+          { q: 'A shop gives a 10% discount on a Rs. 1000 item. The discount is:', options: ['Rs. 10', 'Rs. 50', 'Rs. 100', 'Rs. 200'], answer: 2, explain: '10% of 1000 = 100. Price after discount = 900.' },
+        ],
+      },
+      computer: {
+        title: 'Memory & storage',
+        concept: [
+          'Smallest data unit: **bit** (one 0 or 1). **1 byte = 8 bits**. One letter of text ≈ 1 byte.',
+          'Units in order: **bit → byte → KB → MB → GB → TB** (each step ≈ 1024 times bigger).',
+          '**RAM** = temporary working memory (data lost when power off). **ROM** = permanent, read-only. **Hard disk / SSD / USB** = permanent storage.',
+        ],
+        qs: [
+          { q: 'What does RAM stand for?', options: ['Random Access Memory', 'Read All Memory', 'Rapid Access Machine', 'Random Area Memory'], answer: 0, explain: 'RAM = Random Access Memory — temporary working memory.' },
+          { q: 'Which is the smallest unit of data?', options: ['Byte', 'Bit', 'KB', 'MB'], answer: 1, explain: 'A bit is the smallest — one 0 or 1.' },
+          { q: 'Which device stores data permanently?', options: ['RAM', 'Hard disk', 'CPU', 'Cache'], answer: 1, explain: 'The hard disk keeps data even when power is off.' },
+          { q: '1 byte equals how many bits?', options: ['4', '8', '16', '32'], answer: 1, explain: '1 byte = 8 bits.' },
+          { q: 'Which of these is the LARGEST unit?', options: ['KB', 'MB', 'GB', 'Byte'], answer: 2, explain: 'Order: byte < KB < MB < GB < TB.' },
+          { q: 'What does ROM stand for?', options: ['Random Only Memory', 'Read Only Memory', 'Run Only Memory', 'Right Output Memory'], answer: 1, explain: 'ROM = Read Only Memory — permanent.' },
+          { q: 'Which memory is the FASTEST?', options: ['Hard disk', 'RAM', 'Cache', 'USB'], answer: 2, explain: 'Cache is a very small, very fast memory near the CPU.' },
+          { q: 'Which memory loses data when power goes off?', options: ['RAM', 'ROM', 'Hard disk', 'USB'], answer: 0, explain: 'RAM is volatile — it forgets without power.' },
+          { q: '1 GB equals approximately:', options: ['1024 KB', '1024 MB', '1024 bytes', '1024 TB'], answer: 1, explain: '1 GB = 1024 MB.' },
+          { q: 'A USB flash drive is a ___ device.', options: ['storage', 'processing', 'input', 'output'], answer: 0, explain: 'It stores data — portable storage.' },
+        ],
+      },
+    },
+  },
+}
