@@ -1,8 +1,9 @@
-import { ArrowLeft, CheckCircle2, RotateCcw, BookOpen } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, RotateCcw, BookOpen, ClipboardList, Globe2, Calculator, Monitor, Newspaper, HelpCircle } from 'lucide-react'
 import { lessons } from '../data/index.js'
-import { enrichedDays, fmtDate } from '../data/plan.js'
+import { enrichedDays, fmtDate, routineSteps } from '../data/plan.js'
 import QuizRunner from '../components/QuizRunner.jsx'
 import { useApp } from '../store.jsx'
+import { SubjectIcon } from '../icons.jsx'
 
 function Rich({ text }) {
   const parts = String(text).split('**')
@@ -33,6 +34,13 @@ export default function LessonPage({ lessonId, onBack }) {
     )
   }
 
+  const slotMeta = routineSteps.map((step, i) => {
+    const label = i === 0 ? `Main subject (${dayMeta ? dayMeta.subject : 'English'}) — 40 min` : step
+    const parts = label.split(' — ')
+    return { text: parts.slice(0, -1).join(' — '), time: parts[parts.length - 1] }
+  })
+  const routineIcons = [null, BookOpen, Globe2, Calculator, Monitor, Newspaper, HelpCircle]
+
   return (
     <div>
       <div className="row mb">
@@ -45,6 +53,35 @@ export default function LessonPage({ lessonId, onBack }) {
             {dayMeta.completed ? 'Completed' : 'In progress'}
           </span>
         )}
+      </div>
+
+      <div className="card">
+        <h2>
+          <ClipboardList size={18} strokeWidth={2} className="heading-ico" />
+          Your full day — 2.5 hours
+        </h2>
+        <p className="muted">
+          This lesson is step 1 only (40 minutes). The other six steps are the same every day — tick them in the
+          routine on the Dashboard.
+        </p>
+        <div className="dayplan-list mt">
+          {slotMeta.map((s, i) => {
+            const Icon = routineIcons[i]
+            return (
+              <div className={`dayplan-row ${i === 0 ? 'main' : ''}`} key={i}>
+                <span className="dayplan-ico">
+                  {i === 0 ? (
+                    <SubjectIcon subject={dayMeta ? dayMeta.subject : 'English'} size={16} />
+                  ) : (
+                    <Icon size={16} strokeWidth={2} />
+                  )}
+                </span>
+                <span className="dayplan-label">{s.text}</span>
+                <span className="dayplan-time">{s.time}</span>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <div className="card lesson">
