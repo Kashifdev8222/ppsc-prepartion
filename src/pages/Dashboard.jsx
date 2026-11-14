@@ -1,12 +1,11 @@
-import { Flame, CheckCircle2, TrendingUp, HelpCircle, AlertTriangle, Newspaper, CalendarDays, BookOpen, ListChecks, ClipboardList, Globe2, Calculator, Monitor, History } from 'lucide-react'
+import { Flame, CheckCircle2, TrendingUp, HelpCircle, AlertTriangle, Newspaper, CalendarDays, BookOpen, ListChecks, ClipboardList } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { lessons } from '../data/index.js'
 import { enrichedDays, routineSteps, WEEK1_START, fmtDate, dayStatus } from '../data/plan.js'
-import { todayStr, calcStreak, scorePct, seededPick } from '../utils.js'
+import { todayStr, calcStreak, scorePct } from '../utils.js'
 import { Sparkline } from '../components/charts.jsx'
 import { SubjectIcon } from '../icons.jsx'
-import { PracticeSession, MiniQuiz } from '../components/PracticeSession.jsx'
-import { getPractice, currentAffairsSession } from '../data/practice/index.js'
+import DailyPractice from '../components/DailyPractice.jsx'
 
 export default function Dashboard({ openLesson, goPage }) {
   const { state, actions } = useApp()
@@ -34,19 +33,6 @@ export default function Dashboard({ openLesson, goPage }) {
   const toggleRoutine = (i) => actions.toggleRoutine(todayKey, i)
   const notes = state.notes[todayKey] || ''
   const setNotes = (v) => actions.setNotes(todayKey, v)
-
-  // practice pack for today (the 6 short sessions)
-  const practicePack = todayDay && !todayDay.isTest ? getPractice(todayDay.weekId, todayDay.day) : null
-
-  // revision questions: only from lessons of PAST days
-  const revisionPool = []
-  Object.values(lessons).forEach((l) => {
-    const meta = days.find((d) => d.lessonId === l.id)
-    if (meta && todayStr(meta.date) < todayKey) {
-      l.mcqs.forEach((m) => revisionPool.push({ ...m, src: l.title }))
-    }
-  })
-  const revisionQs = seededPick(revisionPool, todayKey, 3)
 
   const howTo = [
     { icon: CalendarDays, text: 'Open the app at your fixed study time — every day, 2.5 hours total.' },
@@ -155,60 +141,7 @@ export default function Dashboard({ openLesson, goPage }) {
         </ol>
       </div>
 
-      {todayDay && (
-        <div className="card">
-          <h2>
-            <ClipboardList size={18} strokeWidth={2} className="heading-ico" />
-            Today’s practice — the short sessions
-          </h2>
-          <p className="muted">
-            Quick sessions with instant checking. Only the daily quiz in the lesson is saved to your permanent record.
-          </p>
-
-          {todayDay.isTest ? (
-            <p className="note mt">
-              Sunday is test day — no new sessions. Use this time for the revision questions below and reading the
-              news.
-            </p>
-          ) : practicePack ? (
-            <div className="mt">
-              <PracticeSession icon={BookOpen} title={practicePack.english.title} minutes={25}>
-                <MiniQuiz qs={practicePack.english.qs} sid="eng" />
-              </PracticeSession>
-              <PracticeSession icon={Globe2} title={practicePack.pakgk.title} minutes={20}>
-                <MiniQuiz qs={practicePack.pakgk.qs} sid="gk" />
-              </PracticeSession>
-              <PracticeSession icon={Calculator} title={practicePack.math.title} minutes={20}>
-                <MiniQuiz qs={practicePack.math.qs} sid="math" />
-              </PracticeSession>
-              <PracticeSession icon={Monitor} title={practicePack.computer.title} minutes={20}>
-                <MiniQuiz qs={practicePack.computer.qs} sid="comp" />
-              </PracticeSession>
-            </div>
-          ) : (
-            <p className="note mt">Today’s practice pack is being prepared by your tutor — ask in the chat.</p>
-          )}
-
-          <PracticeSession icon={Newspaper} title={currentAffairsSession.title} minutes={10}>
-            <ul>
-              {currentAffairsSession.points.map((p, i) => (
-                <li key={i}>{p}</li>
-              ))}
-            </ul>
-          </PracticeSession>
-
-          <PracticeSession icon={History} title="Revision — older topics" minutes={15}>
-            {revisionQs.length > 0 ? (
-              <MiniQuiz qs={revisionQs} sid="rev" />
-            ) : (
-              <p className="muted">
-                From Day 2 onwards, this gives you questions from your previous lessons. Today (Day 1), use this time
-                to re-read today’s lesson from memory.
-              </p>
-            )}
-          </PracticeSession>
-        </div>
-      )}
+      {todayDay && <DailyPractice day={todayDay} state={state} />}
 
       <div className="stats-grid">
         <div className="stat-card">

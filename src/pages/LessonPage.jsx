@@ -2,6 +2,7 @@ import { ArrowLeft, CheckCircle2, RotateCcw, BookOpen, ClipboardList, Globe2, Ca
 import { lessons } from '../data/index.js'
 import { enrichedDays, fmtDate, routineSteps } from '../data/plan.js'
 import QuizRunner from '../components/QuizRunner.jsx'
+import DailyPractice from '../components/DailyPractice.jsx'
 import { useApp } from '../store.jsx'
 import { SubjectIcon } from '../icons.jsx'
 
@@ -61,8 +62,8 @@ export default function LessonPage({ lessonId, onBack }) {
           Your full day — 2.5 hours
         </h2>
         <p className="muted">
-          This lesson is step 1 only (40 minutes). The other six steps are the same every day — tick them in the
-          routine on the Dashboard.
+          This lesson is step 1 only (40 minutes). The other six steps are right below on this same page — scroll down
+          after the quiz.
         </p>
         <div className="dayplan-list mt">
           {slotMeta.map((s, i) => {
@@ -127,6 +128,8 @@ export default function LessonPage({ lessonId, onBack }) {
         history={attempts}
         onAttempt={(attempt, wrong) => actions.recordAttempt(lesson.id, attempt, wrong)}
       />
+
+      <DailyPractice day={dayMeta} state={state} />
 
       {dayMeta && attempts.length > 0 && !dayMeta.completed && (
         <button className="btn primary" onClick={() => actions.setDay(dayMeta.globalDay, true)}>
