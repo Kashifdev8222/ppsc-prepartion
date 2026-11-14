@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { signIn, signUp } from '../api.js'
-import { Target } from 'lucide-react'
+import { Target, Eye, EyeOff } from 'lucide-react'
 
 export default function AuthScreen() {
   const [mode, setMode] = useState('signin')
@@ -10,6 +10,7 @@ export default function AuthScreen() {
   const [err, setErr] = useState('')
   const [info, setInfo] = useState('')
   const [busy, setBusy] = useState(false)
+  const [showPw, setShowPw] = useState(false)
 
   const submit = async (e) => {
     e.preventDefault()
@@ -84,14 +85,25 @@ export default function AuthScreen() {
         </label>
         <label className="field">
           <span>Password</span>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Minimum 6 characters"
-            minLength={6}
-            required
-          />
+          <div className="password-wrap">
+            <input
+              type={showPw ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Minimum 6 characters"
+              minLength={6}
+              required
+            />
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setShowPw((v) => !v)}
+              title={showPw ? 'Hide password' : 'Show password'}
+              aria-label={showPw ? 'Hide password' : 'Show password'}
+            >
+              {showPw ? <EyeOff size={17} strokeWidth={2} /> : <Eye size={17} strokeWidth={2} />}
+            </button>
+          </div>
         </label>
 
         {err && <div className="alert danger">{err}</div>}

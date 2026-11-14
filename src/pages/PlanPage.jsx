@@ -45,6 +45,10 @@ export default function PlanPage({ openLesson, goPage }) {
             </div>
           ))}
         </div>
+        <p className="note mt">
+          General Knowledge is always covered: Friday’s main subject is GK &amp; Everyday Science, and every single
+          day includes a 20-minute Pakistan Studies / General Knowledge slot in your routine.
+        </p>
       </div>
 
       <div className="card">

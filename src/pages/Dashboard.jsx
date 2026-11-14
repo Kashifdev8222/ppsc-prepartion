@@ -1,4 +1,4 @@
-import { Flame, CheckCircle2, TrendingUp, HelpCircle, AlertTriangle, Newspaper, CalendarDays } from 'lucide-react'
+import { Flame, CheckCircle2, TrendingUp, HelpCircle, AlertTriangle, Newspaper, CalendarDays, BookOpen, ListChecks, ClipboardList } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { lessons } from '../data/index.js'
 import { enrichedDays, routineSteps, WEEK1_START, fmtDate, dayStatus } from '../data/plan.js'
@@ -32,6 +32,16 @@ export default function Dashboard({ openLesson, goPage }) {
   const toggleRoutine = (i) => actions.toggleRoutine(todayKey, i)
   const notes = state.notes[todayKey] || ''
   const setNotes = (v) => actions.setNotes(todayKey, v)
+
+  const howTo = [
+    { icon: CalendarDays, text: 'Open the app at your fixed study time — every day, 2.5 hours total.' },
+    { icon: BookOpen, text: 'Press "Start today’s lesson" and read it slowly. Make short notes in a notebook.' },
+    { icon: HelpCircle, text: 'Attempt the 15 MCQs without looking at the notes.' },
+    { icon: CheckCircle2, text: 'Read every wrong answer’s explanation — the app saves them in the Mistake Log.' },
+    { icon: ListChecks, text: 'Tick the 7 routine steps below as you finish each one.' },
+    { icon: Newspaper, text: 'Write 2–3 lines of current affairs in the notes box.' },
+    { icon: ClipboardList, text: 'Sunday: revise the whole week, then take the 50-question weekly test.' },
+  ]
 
   let hero
   if (beforeStart) {
@@ -108,6 +118,27 @@ export default function Dashboard({ openLesson, goPage }) {
   return (
     <div>
       {hero}
+
+      <div className="card">
+        <h2>
+          <BookOpen size={18} strokeWidth={2} className="heading-ico" />
+          How to study every day
+        </h2>
+        <ol className="howto-list">
+          {howTo.map((s, i) => {
+            const Icon = s.icon
+            return (
+              <li key={i}>
+                <span className="howto-num">{i + 1}</span>
+                <span className="howto-ico">
+                  <Icon size={16} strokeWidth={2} />
+                </span>
+                <span>{s.text}</span>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
 
       <div className="stats-grid">
         <div className="stat-card">
