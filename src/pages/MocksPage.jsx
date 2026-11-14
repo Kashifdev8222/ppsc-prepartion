@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ArrowLeft, ClipboardList, Lock, Trophy } from 'lucide-react'
 import { mocks, mockList, isWeekReady } from '../data/mocks/index.js'
 import { useApp } from '../store.jsx'
 import QuizRunner from '../components/QuizRunner.jsx'
@@ -14,7 +15,7 @@ export default function MocksPage() {
       return (
         <div>
           <button className="btn ghost" onClick={() => setActive(null)}>
-            ← Back
+            <ArrowLeft size={15} strokeWidth={2} /> Back
           </button>
           <div className="card">
             <h2>{meta ? meta.title : active}</h2>
@@ -26,7 +27,7 @@ export default function MocksPage() {
     return (
       <div>
         <button className="btn ghost" onClick={() => setActive(null)}>
-          ← Back to mock tests
+          <ArrowLeft size={15} strokeWidth={2} /> Back to mock tests
         </button>
         <QuizRunner
           key={mock.id}
@@ -43,7 +44,10 @@ export default function MocksPage() {
   return (
     <div>
       <div className="card">
-        <h2>📋 Mock tests</h2>
+        <h2>
+          <ClipboardList size={18} strokeWidth={2} className="heading-ico" />
+          Mock tests
+        </h2>
         <p className="muted">
           Weekly: 50 questions every Sunday · Monthly: full-length after every 4 weeks. Every attempt is saved. Tests
           unlock on the Sunday of their week.
@@ -59,7 +63,8 @@ export default function MocksPage() {
               {m.title}{' '}
               {attempts.length > 0 && (
                 <span className="badge green">
-                  best {Math.max(...attempts.map((a) => Math.round((a.score / a.total) * 100)))}%
+                  <Trophy size={12} strokeWidth={2} /> best{' '}
+                  {Math.max(...attempts.map((a) => Math.round((a.score / a.total) * 100)))}%
                 </span>
               )}
             </h3>
@@ -74,7 +79,9 @@ export default function MocksPage() {
                   <p className="note">Unlocked! Your tutor will add the questions — ask in the chat.</p>
                 )
               ) : (
-                <span className="chip upcoming">🔒 Opens Sunday of Week {m.unlockWeek}</span>
+                <span className="chip upcoming">
+                  <Lock size={12} strokeWidth={2} /> Opens Sunday of Week {m.unlockWeek}
+                </span>
               )}
             </div>
           </div>

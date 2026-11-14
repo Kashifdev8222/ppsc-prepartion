@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FileText, HelpCircle, CheckCircle2, Percent, Clock, TrendingUp, BarChart3, CalendarDays } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { enrichedDays, dayStatus } from '../data/plan.js'
 import { TrendChart, SubjectBars } from '../components/charts.jsx'
@@ -74,35 +75,62 @@ Subject performance: ${rows.length ? rows.map((r) => `${r.label}: ${r.value}%`).
   return (
     <div>
       <div className="card">
-        <h2>📄 Progress report — share with your coach</h2>
+        <h2>
+          <FileText size={18} strokeWidth={2} className="heading-ico" />
+          Progress report — share with your coach
+        </h2>
         <p className="muted">Copy this and send it to ChatGPT (or keep it in your notebook) at the end of each week.</p>
         <pre className="report">{report}</pre>
         <button className="btn primary" onClick={copyReport}>
-          {copied ? '✓ Copied' : '📋 Copy report'}
+          {copied ? <CheckCircle2 size={15} strokeWidth={2} /> : <FileText size={15} strokeWidth={2} />}
+          {copied ? ' Copied' : ' Copy report'}
         </button>
       </div>
 
       <div className="stats-grid">
         <div className="stat-card">
-          <b>{answered}</b>
-          <span className="muted">questions answered</span>
+          <span className="stat-ico blue">
+            <HelpCircle size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{answered}</b>
+            <span className="muted">questions answered</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>{correct}</b>
-          <span className="muted">correct answers</span>
+          <span className="stat-ico green">
+            <CheckCircle2 size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{correct}</b>
+            <span className="muted">correct answers</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>{avg}%</b>
-          <span className="muted">overall accuracy</span>
+          <span className="stat-ico indigo">
+            <Percent size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{avg}%</b>
+            <span className="muted">overall accuracy</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>{fmtDur(timeSpent)}</b>
-          <span className="muted">time practising</span>
+          <span className="stat-ico amber">
+            <Clock size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{fmtDur(timeSpent)}</b>
+            <span className="muted">time practising</span>
+          </div>
         </div>
       </div>
 
       <div className="card">
-        <h2>📈 Score trend</h2>
+        <h2>
+          <TrendingUp size={18} strokeWidth={2} className="heading-ico" />
+          Score trend
+        </h2>
         <p className="muted">Every attempt you ever made, in order. Hover a dot for details.</p>
         <div className="chart-wrap">
           <TrendChart points={trend} />
@@ -110,7 +138,10 @@ Subject performance: ${rows.length ? rows.map((r) => `${r.label}: ${r.value}%`).
       </div>
 
       <div className="card">
-        <h2>📚 Performance by topic</h2>
+        <h2>
+          <BarChart3 size={18} strokeWidth={2} className="heading-ico" />
+          Performance by topic
+        </h2>
         <p className="muted">Average of all your attempts per lesson.</p>
         <div className="mt">
           <SubjectBars rows={rows} />
@@ -118,8 +149,11 @@ Subject performance: ${rows.length ? rows.map((r) => `${r.label}: ${r.value}%`).
       </div>
 
       <div className="card">
-        <h2>🗓️ Consistency — daily habit</h2>
-        <p className="muted">✅ done · ❌ missed · ▶️ today · ⏳ upcoming · ☀️ weekly test</p>
+        <h2>
+          <CalendarDays size={18} strokeWidth={2} className="heading-ico" />
+          Consistency — daily habit
+        </h2>
+        <p className="muted">Green = done · Red = missed · Blue = today · Grey = upcoming · Sun = weekly test</p>
         <div className="heat-grid mt">
           {Object.keys(byWeek)
             .sort((a, b) => a - b)
@@ -136,7 +170,7 @@ Subject performance: ${rows.length ? rows.map((r) => `${r.label}: ${r.value}%`).
                       key={d.globalDay}
                       title={`Day ${d.globalDay} — ${d.title} — ${d.date.toDateString()}`}
                     >
-                      {d.isTest ? '☀️' : d.globalDay}
+                      {d.isTest ? 'S' : d.globalDay}
                     </div>
                   )
                 })}

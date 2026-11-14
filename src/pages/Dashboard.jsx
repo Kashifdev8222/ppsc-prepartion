@@ -1,8 +1,10 @@
+import { Flame, CheckCircle2, TrendingUp, HelpCircle, AlertTriangle, Newspaper, CalendarDays } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { lessons } from '../data/index.js'
 import { enrichedDays, routineSteps, WEEK1_START, fmtDate, dayStatus } from '../data/plan.js'
 import { todayStr, calcStreak, scorePct } from '../utils.js'
 import { Sparkline } from '../components/charts.jsx'
+import { SubjectIcon } from '../icons.jsx'
 
 export default function Dashboard({ openLesson, goPage }) {
   const { state, actions } = useApp()
@@ -36,12 +38,11 @@ export default function Dashboard({ openLesson, goPage }) {
     hero = (
       <div className="hero">
         <div>
-          <span className="badge light">📅 Starts Monday</span>
+          <span className="badge light">
+            <CalendarDays size={13} strokeWidth={2} /> Starts Monday
+          </span>
           <h2>Your programme begins {fmtDate(new Date(WEEK1_START + 'T00:00:00'))}…</h2>
-          <p>
-            Daily routine: 2.5 hours — main subject + English + Pak Studies/GK + Maths + Computer + Current affairs +
-            MCQs. Day 1 is ready to preview.
-          </p>
+          <p>Every day: 2.5 hours, 7 short study steps. Day 1 is ready to preview.</p>
         </div>
         <button className="btn white" onClick={() => openLesson('day01')}>
           Preview Day 1
@@ -52,9 +53,11 @@ export default function Dashboard({ openLesson, goPage }) {
     hero = (
       <div className="hero">
         <div>
-          <span className="badge light">☀️ {todayDay.title}</span>
-          <h2>Sunday — weekly test &amp; revision day</h2>
-          <p>Revise this week’s notes, review the ❌ Mistake Log, then attempt the 50-question weekly test.</p>
+          <span className="badge light">
+            <SubjectIcon subject={todayDay.subject} size={13} /> {todayDay.title}
+          </span>
+          <h2>Sunday — weekly test day</h2>
+          <p>Revise this week’s notes, review the Mistake Log, then attempt the 50-question weekly test.</p>
         </div>
         <button className="btn white" onClick={() => goPage('mocks')}>
           Open Mock Tests
@@ -67,10 +70,11 @@ export default function Dashboard({ openLesson, goPage }) {
       <div className="hero">
         <div>
           <span className={`badge ${todayDay.completed ? 'green' : 'light'}`}>
-            {todayDay.completed ? '✅ Completed' : '📖 Today’s main subject'}
+            {todayDay.completed ? <CheckCircle2 size={13} strokeWidth={2} /> : <SubjectIcon subject={todayDay.subject} size={13} />}
+            {todayDay.completed ? ' Completed' : ` Today’s main subject`}
           </span>
           <h2>
-            {todayDay.subject} — {todayDay.title}
+            {todayDay.subject}: {todayDay.title}
           </h2>
           <p>
             Day {todayDay.globalDay} · Week {todayDay.weekId} · {fmtDate(todayDay.date)}
@@ -81,7 +85,7 @@ export default function Dashboard({ openLesson, goPage }) {
             {todayDay.completed ? 'Review lesson' : 'Start today’s lesson'}
           </button>
         ) : (
-          <div className="note light">📝 This lesson is being prepared by your tutor.</div>
+          <div className="note light">This lesson is being prepared by your tutor.</div>
         )}
       </div>
     )
@@ -89,7 +93,9 @@ export default function Dashboard({ openLesson, goPage }) {
     hero = (
       <div className="hero">
         <div>
-          <span className="badge light">🎉</span>
+          <span className="badge light">
+            <CheckCircle2 size={13} strokeWidth={2} /> Well done
+          </span>
           <h2>All scheduled days done</h2>
           <p>Revise weak areas, retake old quizzes, or ask your tutor for extra practice.</p>
         </div>
@@ -105,29 +111,52 @@ export default function Dashboard({ openLesson, goPage }) {
 
       <div className="stats-grid">
         <div className="stat-card">
-          <b>🔥 {streak}</b>
-          <span className="muted">day streak</span>
+          <span className="stat-ico amber">
+            <Flame size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{streak}</b>
+            <span className="muted">day streak</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>
-            {doneCount}
-            <span className="muted">/{days.length}</span>
-          </b>
-          <span className="muted">days done</span>
+          <span className="stat-ico green">
+            <CheckCircle2 size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>
+              {doneCount}
+              <span className="muted">/{days.length}</span>
+            </b>
+            <span className="muted">days done</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>{avg}%</b>
-          <span className="muted">average score</span>
+          <span className="stat-ico indigo">
+            <TrendingUp size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{avg}%</b>
+            <span className="muted">average score</span>
+          </div>
         </div>
         <div className="stat-card">
-          <b>{answered}</b>
-          <span className="muted">questions answered</span>
+          <span className="stat-ico blue">
+            <HelpCircle size={19} strokeWidth={2} />
+          </span>
+          <div>
+            <b>{answered}</b>
+            <span className="muted">questions answered</span>
+          </div>
         </div>
       </div>
 
       {missed.length > 0 && (
         <div className="card missed-card">
-          <h2>⚠️ {missed.length} missed day{missed.length > 1 ? 's' : ''} — catch up</h2>
+          <h2>
+            <AlertTriangle size={18} strokeWidth={2} className="heading-ico" />
+            {missed.length} missed day{missed.length > 1 ? 's' : ''} — catch up
+          </h2>
           {missed.map((d) => {
             const hasLesson = !!lessons[d.lessonId]
             return (
@@ -151,7 +180,7 @@ export default function Dashboard({ openLesson, goPage }) {
                     )
                   )}
                   <button className="btn ghost" onClick={() => actions.setDay(d.globalDay, true)}>
-                    ✓ Mark done
+                    Mark done
                   </button>
                 </div>
               </div>
@@ -161,27 +190,36 @@ export default function Dashboard({ openLesson, goPage }) {
       )}
 
       <div className="card">
-        <h2>✅ Today’s 2.5-hour routine (150 minutes)</h2>
-        {routineSteps.map((step, i) => (
-          <label key={i} className={routine[i] ? 'check done' : 'check'}>
-            <input type="checkbox" checked={!!routine[i]} onChange={() => toggleRoutine(i)} />
-            <span>{routineLabel(i)}</span>
-          </label>
-        ))}
+        <h2>Today’s 2.5-hour routine</h2>
+        <p className="muted">Tick each step as you finish it. Only the first step changes every day.</p>
+        <div className="mt">
+          {routineSteps.map((step, i) => (
+            <label key={i} className={routine[i] ? 'check done' : 'check'}>
+              <input type="checkbox" checked={!!routine[i]} onChange={() => toggleRoutine(i)} />
+              <span>{routineLabel(i)}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
       <div className="grid2">
         <div className="card">
-          <h2>📈 Recent scores</h2>
+          <h2>
+            <TrendingUp size={18} strokeWidth={2} className="heading-ico" />
+            Your scores
+          </h2>
           <Sparkline points={spark} />
           <p className="muted mt">
             Last {Math.min(spark.length, 8)} attempts · average {avg}%
           </p>
         </div>
         <div className="card">
-          <h2>🗞️ Current affairs notes</h2>
+          <h2>
+            <Newspaper size={18} strokeWidth={2} className="heading-ico" />
+            Current affairs notes
+          </h2>
           <textarea
-            placeholder="Jot today’s 10-minute current affairs points here..."
+            placeholder="Write today’s 10-minute current affairs points here..."
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
           />

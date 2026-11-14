@@ -1,16 +1,21 @@
 import { useState } from 'react'
+import { CheckCircle2, XCircle, PlayCircle, Clock, ChevronDown, ChevronUp, CalendarDays } from 'lucide-react'
 import { weeks, enrichedDays, fmtDate, dayStatus, weekRange } from '../data/plan.js'
 import { lessons } from '../data/index.js'
 import { useApp } from '../store.jsx'
+import { SubjectIcon } from '../icons.jsx'
 
 const phaseClass = { Foundation: 'blue', Expand: 'amber', Exam: 'green', Final: 'green' }
 
-const statusLabel = {
-  done: '✅ Done',
-  today: '▶️ Today',
-  missed: '❌ Missed',
-  upcoming: '⏳ Upcoming',
-}
+const rotation = [
+  { day: 'Monday', subject: 'English' },
+  { day: 'Tuesday', subject: 'Pakistan Studies' },
+  { day: 'Wednesday', subject: 'Mathematics' },
+  { day: 'Thursday', subject: 'Computer Studies' },
+  { day: 'Friday', subject: 'GK & Everyday Science' },
+  { day: 'Saturday', subject: 'Islamic Studies, Urdu & Reasoning' },
+  { day: 'Sunday', subject: 'Weekly Test & Revision' },
+]
 
 export default function PlanPage({ openLesson, goPage }) {
   const { state } = useApp()
@@ -25,14 +30,27 @@ export default function PlanPage({ openLesson, goPage }) {
   return (
     <div>
       <div className="card">
-        <h2>🗺️ 12-week programme</h2>
+        <h2>How your plan works</h2>
+        <p className="muted">Every day has the same 7 study steps (2.5 hours). Only the 40-minute main subject changes:</p>
+        <div className="slot-grid mt">
+          {rotation.map((r) => (
+            <div className="slot-card" key={r.day}>
+              <span className="slot-ico">
+                <SubjectIcon subject={r.subject} size={18} />
+              </span>
+              <div>
+                <b>{r.day}</b>
+                <span className="muted">{r.subject}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="card">
+        <h2>12-week programme</h2>
         <p className="muted">
-          One main subject every day on a fixed weekly rotation: Monday English · Tuesday Pakistan Studies · Wednesday
-          Mathematics · Thursday Computer · Friday GK &amp; Everyday Science · Saturday Islamic Studies, Urdu &amp;
-          Reasoning · Sunday weekly test. The other six short sessions run every day.
-        </p>
-        <p className="muted mt">
-          Past patterns are only a reference — always check ppssc.gop.pk when a vacancy is announced.
+          Past papers are only a reference — always check ppssc.gop.pk when a vacancy is announced.
         </p>
       </div>
 
@@ -44,22 +62,14 @@ export default function PlanPage({ openLesson, goPage }) {
         return (
           <div className="card" key={w.id}>
             <div className="weekhead" onClick={() => setOpen((o) => ({ ...o, [w.id]: !isOpen }))}>
-              <div>
+              <div className="week-title">
                 <span className={`badge ${phaseClass[w.phase]}`}>{w.phase}</span>
                 <strong>
                   Week {w.id} — {w.title}
                 </strong>
                 {range && <span className="muted"> · {range}</span>}
               </div>
-              <span className="muted">{isOpen ? '▲' : '▼'}</span>
-            </div>
-
-            <div className="chips">
-              {w.topics.map((t, i) => (
-                <span className="chip-grey" key={i}>
-                  {t}
-                </span>
-              ))}
+              <span className="muted">{isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}</span>
             </div>
 
             <div className="bar">
@@ -73,11 +83,19 @@ export default function PlanPage({ openLesson, goPage }) {
               wd.map((d) => {
                 const st = dayStatus(d, state)
                 const hasLesson = !!lessons[d.lessonId]
+                const StatusIcon =
+                  st === 'done' ? CheckCircle2 : st === 'missed' ? XCircle : st === 'today' ? PlayCircle : Clock
                 return (
                   <div className={`day-row ${st === 'today' ? 'today' : ''}`} key={d.globalDay}>
                     <div className="day-main">
-                      <span className={`chip ${st}`}>{statusLabel[st]}</span>
-                      <span className="chip-grey">{d.isTest ? '☀️ Test' : d.subject}</span>
+                      <span className={`chip ${st}`}>
+                        <StatusIcon size={13} strokeWidth={2} />
+                        {st === 'done' ? 'Done' : st === 'missed' ? 'Missed' : st === 'today' ? 'Today' : 'Upcoming'}
+                      </span>
+                      <span className="subject-chip">
+                        <SubjectIcon subject={d.subject} size={14} />
+                        {d.isTest ? 'Weekly Test' : d.subject}
+                      </span>
                       <span>
                         <strong>
                           Day {d.globalDay} — {d.title}

@@ -1,3 +1,4 @@
+import { ArrowLeft, CheckCircle2, RotateCcw, BookOpen } from 'lucide-react'
 import { lessons } from '../data/index.js'
 import { enrichedDays, fmtDate } from '../data/plan.js'
 import QuizRunner from '../components/QuizRunner.jsx'
@@ -23,7 +24,7 @@ export default function LessonPage({ lessonId, onBack }) {
     return (
       <div>
         <button className="btn ghost" onClick={onBack}>
-          ← Back
+          <ArrowLeft size={15} strokeWidth={2} /> Back
         </button>
         <div className="card">
           <p>This lesson is not added yet — ask your tutor in the chat.</p>
@@ -36,11 +37,12 @@ export default function LessonPage({ lessonId, onBack }) {
     <div>
       <div className="row mb">
         <button className="btn ghost" onClick={onBack}>
-          ← Back
+          <ArrowLeft size={15} strokeWidth={2} /> Back
         </button>
         {dayMeta && (
           <span className={`chip ${dayMeta.completed ? 'done' : 'upcoming'}`}>
-            {dayMeta.completed ? '✅ Completed' : '📖 In progress'}
+            {dayMeta.completed ? <CheckCircle2 size={13} strokeWidth={2} /> : <BookOpen size={13} strokeWidth={2} />}
+            {dayMeta.completed ? 'Completed' : 'In progress'}
           </span>
         )}
       </div>
@@ -73,7 +75,7 @@ export default function LessonPage({ lessonId, onBack }) {
             )}
             {s.note && (
               <div className="note">
-                📌 <Rich text={s.note} />
+                <Rich text={s.note} />
               </div>
             )}
           </section>
@@ -91,18 +93,18 @@ export default function LessonPage({ lessonId, onBack }) {
 
       {dayMeta && attempts.length > 0 && !dayMeta.completed && (
         <button className="btn primary" onClick={() => actions.setDay(dayMeta.globalDay, true)}>
-          ✅ Mark Day {dayMeta.globalDay} as complete
+          <CheckCircle2 size={16} strokeWidth={2} /> Mark Day {dayMeta.globalDay} as complete
         </button>
       )}
       {dayMeta && dayMeta.completed && (
         <button className="btn ghost" onClick={() => actions.setDay(dayMeta.globalDay, false)}>
-          ↩️ Undo completion
+          <RotateCcw size={15} strokeWidth={2} /> Undo completion
         </button>
       )}
 
       {dayMeta && dayMeta.completed && nextDay && (
         <div className="note">
-          🎉 Day {dayMeta.globalDay} complete. Next: Day {nextDay.globalDay} — {nextDay.title} ({fmtDate(nextDay.date)}).
+          Day {dayMeta.globalDay} complete. Next: Day {nextDay.globalDay} — {nextDay.title} ({fmtDate(nextDay.date)}).
         </div>
       )}
     </div>

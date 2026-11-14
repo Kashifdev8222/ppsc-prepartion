@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { signIn, signUp } from '../api.js'
+import { Target } from 'lucide-react'
 
 export default function AuthScreen() {
   const [mode, setMode] = useState('signin')
@@ -34,7 +35,9 @@ export default function AuthScreen() {
   return (
     <div className="auth-wrap">
       <form className="auth-card" onSubmit={submit}>
-        <div className="auth-logo">🎯</div>
+        <div className="auth-logo">
+          <Target size={26} strokeWidth={2.2} />
+        </div>
         <h1>PPSC Prep Coach</h1>
         <p className="muted">Your daily tutor for Punjab Police &amp; Special Branch recruitment</p>
 

@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { User, Cloud, Download, Upload, AlertTriangle, Info } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { isCloud } from '../api.js'
 import { todayStr } from '../utils.js'
@@ -27,7 +28,7 @@ export default function SettingsPage() {
         const data = JSON.parse(reader.result)
         if (!data || typeof data !== 'object') throw new Error('bad')
         actions.importState(data)
-        window.alert('Backup imported successfully ✓')
+        window.alert('Backup imported successfully')
       } catch {
         window.alert('That file is not a valid backup.')
       }
@@ -45,7 +46,10 @@ export default function SettingsPage() {
   return (
     <div>
       <div className="card">
-        <h2>👤 Profile</h2>
+        <h2>
+          <User size={18} strokeWidth={2} className="heading-ico" />
+          Profile
+        </h2>
         <label className="field">
           <span>Full name</span>
           <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" />
@@ -56,7 +60,10 @@ export default function SettingsPage() {
       </div>
 
       <div className="card">
-        <h2>☁️ Account</h2>
+        <h2>
+          <Cloud size={18} strokeWidth={2} className="heading-ico" />
+          Account
+        </h2>
         {isCloud ? (
           <>
             <p>
@@ -74,16 +81,19 @@ export default function SettingsPage() {
       </div>
 
       <div className="card">
-        <h2>💾 Backup</h2>
+        <h2>
+          <Download size={18} strokeWidth={2} className="heading-ico" />
+          Backup
+        </h2>
         <p className="muted">Download a copy of all your data as a file.</p>
         <div className="row mt">
           <button className="btn primary" onClick={exportJson}>
-            ⬇️ Download backup
+            <Download size={15} strokeWidth={2} /> Download backup
           </button>
           {!isCloud && (
             <>
               <button className="btn" onClick={() => fileRef.current.click()}>
-                ⬆️ Import backup
+                <Upload size={15} strokeWidth={2} /> Import backup
               </button>
               <input
                 ref={fileRef}
@@ -95,18 +105,26 @@ export default function SettingsPage() {
             </>
           )}
         </div>
-        {isCloud && <p className="muted mt">Import is only needed in local mode — your account already has your data.</p>}
+        {isCloud && (
+          <p className="muted mt">Import is only needed in local mode — your account already has your data.</p>
+        )}
       </div>
 
       <div className="card">
-        <h2>⚠️ Danger zone</h2>
+        <h2>
+          <AlertTriangle size={18} strokeWidth={2} className="heading-ico" />
+          Danger zone
+        </h2>
         <button className="btn danger" onClick={resetAll}>
           Reset all progress
         </button>
       </div>
 
       <div className="card">
-        <h2>ℹ️ About</h2>
+        <h2>
+          <Info size={18} strokeWidth={2} className="heading-ico" />
+          About
+        </h2>
         <p className="muted">
           PPSC Prep Coach — a personal study tracker for Punjab Police / Special Branch recruitment preparation.
           Lesson content is added day by day by your AI tutor. Always verify the latest eligibility and syllabus on the

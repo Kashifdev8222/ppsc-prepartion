@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Timer, History, RotateCcw, CheckCircle2, XCircle, HelpCircle } from 'lucide-react'
 import { todayStr, fmtDur, scorePct } from '../utils.js'
 
 const letters = ['a', 'b', 'c', 'd']
@@ -59,7 +60,10 @@ export default function QuizRunner({ storageKey, title, questions, onAttempt, hi
     <div className="card">
       <div className="quiz-head">
         <div>
-          <h2>📝 {title}</h2>
+          <h2>
+            <HelpCircle size={18} strokeWidth={2} className="heading-ico" />
+            {title}
+          </h2>
           <p className="muted">
             {questions.length} questions · suggested time {Math.round(suggested / 60)} min
           </p>
@@ -67,7 +71,7 @@ export default function QuizRunner({ storageKey, title, questions, onAttempt, hi
         <div className="quiz-meta">
           {!submitted && (
             <span className={`timer ${overTime ? 'warn' : ''}`} title="Time taken">
-              ⏱ {mm}:{ss}
+              <Timer size={14} strokeWidth={2} /> {mm}:{ss}
             </span>
           )}
           {best !== null && <span className="badge green">Best {best}%</span>}
@@ -110,7 +114,12 @@ export default function QuizRunner({ storageKey, title, questions, onAttempt, hi
             return (
               <div className={`qblock ${right ? 'qright' : 'qwrong'}`} key={qi}>
                 <p>
-                  <strong>{qi + 1}.</strong> {m.q} {right ? '✅' : '❌'}
+                  <strong>{qi + 1}.</strong> {m.q}{' '}
+                  {right ? (
+                    <CheckCircle2 size={16} strokeWidth={2} className="q-icon ok" />
+                  ) : (
+                    <XCircle size={16} strokeWidth={2} className="q-icon bad" />
+                  )}
                 </p>
                 <div className="locked">
                   {m.options.map((o, oi) => {
@@ -134,14 +143,17 @@ export default function QuizRunner({ storageKey, title, questions, onAttempt, hi
             )
           })}
           <button className="btn mt" onClick={retake}>
-            🔁 Retake (saved as a new attempt)
+            <RotateCcw size={15} strokeWidth={2} /> Retake (saved as a new attempt)
           </button>
         </>
       )}
 
       {history && history.length > 0 && (
         <div className="attempts">
-          <h3>📜 Attempt history — every attempt is saved</h3>
+          <h3>
+            <History size={16} strokeWidth={2} className="heading-ico" />
+            Attempt history — every attempt is saved
+          </h3>
           {history.map((a, i) => (
             <div className="attempt-row" key={i}>
               <span className="badge green">

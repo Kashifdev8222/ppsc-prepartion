@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Home, CalendarDays, ClipboardList, AlertCircle, TrendingUp, Settings, Flame, LogOut, Target } from 'lucide-react'
 import { useApp } from '../store.jsx'
 import { calcStreak, initials } from '../utils.js'
 import Dashboard from '../pages/Dashboard.jsx'
@@ -10,12 +11,12 @@ import SettingsPage from '../pages/SettingsPage.jsx'
 import LessonPage from '../pages/LessonPage.jsx'
 
 const nav = [
-  { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
-  { id: 'plan', label: 'Study Plan', icon: '🗺️' },
-  { id: 'mocks', label: 'Mock Tests', icon: '📋' },
-  { id: 'mistakes', label: 'Mistakes', icon: '❌' },
-  { id: 'progress', label: 'Progress', icon: '📈' },
-  { id: 'settings', label: 'Settings', icon: '⚙️' },
+  { id: 'dashboard', label: 'Dashboard', icon: Home },
+  { id: 'plan', label: 'Study Plan', icon: CalendarDays },
+  { id: 'mocks', label: 'Mock Tests', icon: ClipboardList },
+  { id: 'mistakes', label: 'Mistakes', icon: AlertCircle },
+  { id: 'progress', label: 'Progress', icon: TrendingUp },
+  { id: 'settings', label: 'Settings', icon: Settings },
 ]
 
 const titles = {
@@ -55,21 +56,26 @@ export default function Layout() {
     <div className="shell">
       <aside className="sidebar">
         <div className="brand">
-          <span className="brand-logo">🎯</span>
+          <span className="brand-logo">
+            <Target size={20} strokeWidth={2.2} />
+          </span>
           <span>PPSC Prep Coach</span>
         </div>
         <nav className="nav">
-          {nav.map((n) => (
-            <button
-              key={n.id}
-              className={`nav-btn ${page === n.id ? 'active' : ''}`}
-              onClick={() => goPage(n.id)}
-            >
-              <span className="nav-ico">{n.icon}</span>
-              <span className="nav-label">{n.label}</span>
-              {n.id === 'mistakes' && openMistakes > 0 && <span className="nav-count">{openMistakes}</span>}
-            </button>
-          ))}
+          {nav.map((n) => {
+            const Icon = n.icon
+            return (
+              <button
+                key={n.id}
+                className={`nav-btn ${page === n.id ? 'active' : ''}`}
+                onClick={() => goPage(n.id)}
+              >
+                <Icon size={18} strokeWidth={2} />
+                <span className="nav-label">{n.label}</span>
+                {n.id === 'mistakes' && openMistakes > 0 && <span className="nav-count">{openMistakes}</span>}
+              </button>
+            )
+          })}
         </nav>
         <div className="user-chip">
           <div className="avatar">{initials(state.profile.fullName)}</div>
@@ -79,7 +85,7 @@ export default function Layout() {
           </div>
           {user && (
             <button className="icon-btn" title="Sign out" onClick={signOut}>
-              ⎋
+              <LogOut size={16} strokeWidth={2} />
             </button>
           )}
         </div>
@@ -99,7 +105,10 @@ export default function Layout() {
             </p>
           </div>
           <div className="streak-chip" title="Day streak">
-            🔥 {streak} day{streak === 1 ? '' : 's'}
+            <Flame size={16} strokeWidth={2} className="streak-flame" />
+            <span>
+              {streak} day{streak === 1 ? '' : 's'}
+            </span>
           </div>
         </header>
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { AlertCircle, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react'
 import { enrichedDays } from '../data/plan.js'
 import { useApp } from '../store.jsx'
 
@@ -27,10 +28,13 @@ export default function MistakesPage() {
   return (
     <div>
       <div className="card">
-        <h2>❌ Mistake log</h2>
+        <h2>
+          <AlertCircle size={18} strokeWidth={2} className="heading-ico" />
+          Mistake log
+        </h2>
         <p className="muted">
-          Every wrong answer from your quizzes lands here. Review these before the weekly mock test. Reviewed mistakes
-          stay in your history.
+          Every wrong answer from your quizzes lands here. Review these before the weekly test. Reviewed mistakes stay
+          in your history.
         </p>
         {openItems.length > 0 && (
           <div className="row mt">
@@ -48,7 +52,9 @@ export default function MistakesPage() {
 
       {openItems.length === 0 ? (
         <div className="card">
-          <p>🎉 No open mistakes — great work.</p>
+          <p>
+            <CheckCircle2 size={16} strokeWidth={2} className="q-icon ok" /> No open mistakes — great work.
+          </p>
         </div>
       ) : (
         visible.map((m, i) => (
@@ -66,11 +72,11 @@ export default function MistakesPage() {
               </span>
             </p>
             <p>
-              Correct: <span style={{ color: '#166534' }}>{letters[m.correct]}) {m.options[m.correct]}</span>
+              Correct: <span style={{ color: '#15803d' }}>{letters[m.correct]}) {m.options[m.correct]}</span>
             </p>
             <p className="explain">{m.explain}</p>
             <button className="btn ghost mt" onClick={() => actions.toggleMistake(m.lessonId, m.id)}>
-              ✓ Mark reviewed
+              <CheckCircle2 size={15} strokeWidth={2} /> Mark reviewed
             </button>
           </div>
         ))
@@ -79,7 +85,8 @@ export default function MistakesPage() {
       {resolvedItems.length > 0 && (
         <div className="card">
           <button className="btn ghost" onClick={() => setShowResolved((v) => !v)}>
-            {showResolved ? '▲ Hide' : '▼ Show'} reviewed mistakes ({resolvedItems.length})
+            {showResolved ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+            {showResolved ? 'Hide' : 'Show'} reviewed mistakes ({resolvedItems.length})
           </button>
           {showResolved && (
             <div className="mt">
