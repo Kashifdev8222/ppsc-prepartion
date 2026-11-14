@@ -42,7 +42,7 @@ export default function DailyPractice({ day, state }) {
         Steps 2–7 — your six short sessions
       </h2>
       <p className="muted">
-        Each session: read the concept first, then answer 10 questions with instant checking. Only the daily quiz (step
+        Each session: read the concept first, then answer 15 questions with instant checking. Only the daily quiz (step
         1) is saved to your permanent record.
       </p>
 
