@@ -4,11 +4,11 @@ export const practiceDay2 = {
       english: {
         title: 'Plurals — rules you must know',
         concept: [
-          'Most nouns simply add **-s**: book → books, officer → officers.',
-          'Ending in **s, ss, sh, ch, x, o** → add **-es**: box → boxes, watch → watches, hero → heroes, tomato → tomatoes.',
-          'Ending in **-y** after a consonant → change to **-ies**: city → cities. (After a vowel: boy → boys.)',
-          'Ending in **-f / -fe** → usually **-ves**: leaf → leaves, knife → knives.',
-          '**Irregular (memorise):** child → children, man → men, woman → women, foot → feet, tooth → teeth, mouse → mice. **No change:** sheep, deer.',
+          { en: 'Most nouns simply add **-s**: book → books, officer → officers.', ur: 'زیادہ تر اسموں میں صرف **-s** لگتا ہے: book → books، officer → officers۔' },
+          { en: 'Ending in **s, ss, sh, ch, x, o** → add **-es**: box → boxes, watch → watches, hero → heroes, tomato → tomatoes.', ur: 'جن کا اختتام **s, ss, sh, ch, x, o** پر ہو ان میں **-es** لگتا ہے: box → boxes، watch → watches، hero → heroes، tomato → tomatoes۔' },
+          { en: 'Ending in **-y** after a consonant → change to **-ies**: city → cities. (After a vowel: boy → boys.)', ur: 'اختتام **-y** پر ہو اور اس سے پہلے consonant ہو تو **-ies** میں بدل جاتا ہے: city → cities۔ (حرفِ علت کے بعد: boy → boys۔)' },
+          { en: 'Ending in **-f / -fe** → usually **-ves**: leaf → leaves, knife → knives.', ur: 'اختتام **-f / -fe** پر ہو تو عام طور پر **-ves**: leaf → leaves، knife → knives۔' },
+          { en: '**Irregular (memorise):** child → children, man → men, woman → women, foot → feet, tooth → teeth, mouse → mice. **No change:** sheep, deer.', ur: '**بے قاعدہ (یاد کریں):** child → children، man → men، woman → women، foot → feet، tooth → teeth، mouse → mice۔ **بغیر تبدیلی:** sheep، deer۔' },
         ],
         qs: [
           { q: 'The plural of "book" is:', options: ['books', 'bookes', 'bookies', 'book'], answer: 0, explain: 'Most nouns simply add -s.' },
@@ -31,10 +31,10 @@ export const practiceDay2 = {
       pakgk: {
         title: 'Pak Studies / GK — Pakistan Movement dates',
         concept: [
-          '**1857** — War of Independence. **1875** — Sir Syed Ahmed Khan founds MAO College, Aligarh.',
-          '**1906** — All-India Muslim League founded at Dhaka (first president: Sir Aga Khan III). **1930** — Iqbal’s Allahabad Address.',
-          '**1933** — Chaudhry Rahmat Ali coins the name "Pakistan" in "Now or Never".',
-          '**1940** — Lahore Resolution, 23 March (Pakistan Day). **1947** — Pakistan comes into being, 14 August.',
+          { en: '**1857** — War of Independence. **1875** — Sir Syed Ahmed Khan founds MAO College, Aligarh.', ur: '**1857** — جنگِ آزادی۔ **1875** — سر سید احمد خان نے ایم اے او کالج علی گڑھ قائم کیا۔' },
+          { en: '**1906** — All-India Muslim League founded at Dhaka (first president: Sir Aga Khan III). **1930** — Iqbal’s Allahabad Address.', ur: '**1906** — آل انڈیا مسلم لیگ ڈھاکہ میں قائم ہوئی (پہلے صدر: سر آغا خان سوم)۔ **1930** — اقبال کا خطبہ الٰہ آباد۔' },
+          { en: '**1933** — Chaudhry Rahmat Ali coins the name "Pakistan" in "Now or Never".', ur: '**1933** — چوہدری رحمت علی نے "Now or Never" میں نام **پاکستان** تجویز کیا۔' },
+          { en: '**1940** — Lahore Resolution, 23 March (Pakistan Day). **1947** — Pakistan comes into being, 14 August.', ur: '**1940** — قراردادِ لاہور، 23 مارچ (یومِ پاکستان)۔ **1947** — پاکستان وجود میں آیا، 14 اگست۔' },
         ],
         qs: [
           { q: 'The All-India Muslim League was founded in:', options: ['1885', '1906', '1909', '1940'], answer: 1, explain: '1906 at Dhaka. 1885 is the Congress, 1940 is the Lahore Resolution.' },
@@ -57,9 +57,9 @@ export const practiceDay2 = {
       math: {
         title: 'Multiplication & division',
         concept: [
-          '**Multiplication** is repeated addition: 12 × 8 means "12 added eight times" = 96.',
-          '**Division** is sharing equally: 144 ÷ 12 means "144 split into 12 equal groups" = 12.',
-          '**Fraction of a number:** first divide by the bottom, then multiply by the top: 3/4 of 80 = (80 ÷ 4) × 3 = 60.',
+          { en: '**Multiplication** is repeated addition: 12 × 8 means "12 added eight times" = 96.', ur: '**ضرب** بار بار جمع کرنا ہے: 12 × 8 یعنی "12 کو آٹھ بار جمع کریں" = 96۔' },
+          { en: '**Division** is sharing equally: 144 ÷ 12 means "144 split into 12 equal groups" = 12.', ur: '**تقسیم** برابر حصوں میں بانٹنا ہے: 144 ÷ 12 یعنی "144 کو 12 برابر حصوں میں" = 12۔' },
+          { en: '**Fraction of a number:** first divide by the bottom, then multiply by the top: 3/4 of 80 = (80 ÷ 4) × 3 = 60.', ur: '**عدد کا کسر حصہ:** پہلے نیچے والے عدد سے تقسیم کریں، پھر اوپر والے سے ضرب دیں: 3/4 of 80 = (80 ÷ 4) × 3 = 60۔' },
         ],
         qs: [
           { q: '12 × 8 = ?', options: ['86', '96', '106', '92'], answer: 1, explain: '12 × 8 = 96.' },
@@ -82,9 +82,9 @@ export const practiceDay2 = {
       computer: {
         title: 'Input & output devices',
         concept: [
-          '**Input devices** send data INTO the computer: keyboard, mouse, scanner, microphone.',
-          '**Output devices** show results FROM the computer: monitor, printer, speaker, projector.',
-          'Some devices do both — a **touch screen** is input AND output.',
+          { en: '**Input devices** send data INTO the computer: keyboard, mouse, scanner, microphone.', ur: '**ان پٹ ڈیوائسز** کمپیوٹر میں ڈیٹا بھیجتی ہیں: کی بورڈ، ماؤس، سکینر، مائیکروفون۔' },
+          { en: '**Output devices** show results FROM the computer: monitor, printer, speaker, projector.', ur: '**آؤٹ پٹ ڈیوائسز** کمپیوٹر سے نتیجہ دکھاتی ہیں: مانیٹر، پرنٹر، اسپیکر، پروجیکٹر۔' },
+          { en: 'Some devices do both — a **touch screen** is input AND output.', ur: 'کچھ ڈیوائسز دونوں کام کرتی ہیں — **ٹچ اسکرین** ان پٹ بھی ہے اور آؤٹ پٹ بھی۔' },
         ],
         qs: [
           { q: 'Which of these is an output device?', options: ['Mouse', 'Keyboard', 'Scanner', 'Monitor'], answer: 3, explain: 'Monitor shows output; the others are input devices.' },

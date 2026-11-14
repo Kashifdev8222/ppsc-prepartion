@@ -4,9 +4,9 @@ export const practiceDay4 = {
       english: {
         title: 'Synonyms — same meaning',
         concept: [
-          'A **synonym** is a word with the SAME (or nearly the same) meaning.',
-          'Learn them in pairs: big = large, quick = fast, begin = start, happy = glad, brave = courageous.',
-          'Exam trick: replace the word in your head — "The task was hard" → hard = difficult.',
+          { en: 'A **synonym** is a word with the SAME (or nearly the same) meaning.', ur: '**Synonym** ایسا لفظ جس کا مطلب ایک جیسا (یا تقریباً ایک جیسا) ہو۔' },
+          { en: 'Learn them in pairs: big = large, quick = fast, begin = start, happy = glad, brave = courageous.', ur: 'جوڑوں میں یاد کریں: big = large، quick = fast، begin = start، happy = glad، brave = courageous۔' },
+          { en: 'Exam trick: replace the word in your head — "The task was hard" → hard = difficult.', ur: 'امتحانی ترکیب: لفظ کو ذہن میں بدل کر دیکھیں — "The task was hard" → hard = difficult۔' },
         ],
         qs: [
           { q: 'The synonym of "big" is:', options: ['small', 'large', 'tiny', 'short'], answer: 1, explain: 'Big = large. Small and tiny are antonyms.' },
@@ -29,10 +29,10 @@ export const practiceDay4 = {
       pakgk: {
         title: 'Pak Studies / GK — Rivers of Pakistan',
         concept: [
-          'Longest river of Pakistan: **Indus** — flows into the **Arabian Sea**. It is called the lifeline of Sindh.',
-          'The **five rivers of Punjab**: Jhelum, Chenab, Ravi, Sutlej, Beas.',
-          '**Ravi** flows through **Lahore**. **Tarbela Dam** is on the Indus, **Mangla Dam** on the Jhelum.',
-          'The Indus originates in **Tibet**, near Lake Mansarovar.',
+          { en: 'Longest river of Pakistan: **Indus** — flows into the **Arabian Sea**. It is called the lifeline of Sindh.', ur: 'پاکستان کا سب سے لمبا دریا: **سندھ (Indus)** — بحیرہ عرب میں گرتا ہے۔ اسے سندھ کی لائف لائن کہتے ہیں۔' },
+          { en: 'The **five rivers of Punjab**: Jhelum, Chenab, Ravi, Sutlej, Beas.', ur: '**پنجاب کے پانچ دریا**: جہلم، چناب، راوی، ستلج، بیاس۔' },
+          { en: '**Ravi** flows through **Lahore**. **Tarbela Dam** is on the Indus, **Mangla Dam** on the Jhelum.', ur: '**راوی** لاہور کے قریب بہتا ہے۔ **تربیلا ڈیم** سندھ پر، **منگلا ڈیم** جہلم پر۔' },
+          { en: 'The Indus originates in **Tibet**, near Lake Mansarovar.', ur: 'دریائے سندھ **تبت** (جھیل مانسروور کے قریب) سے نکلتا ہے۔' },
         ],
         qs: [
           { q: 'Which is the longest river of Pakistan?', options: ['Ravi', 'Indus', 'Jhelum', 'Kabul'], answer: 1, explain: 'The Indus — it ends in the Arabian Sea.' },
@@ -55,9 +55,9 @@ export const practiceDay4 = {
       math: {
         title: 'Averages',
         concept: [
-          '**Average = total sum ÷ number of items.**',
-          'Example: average of 10, 20, 30 → (10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.',
-          'Reverse trick: **total = average × number of items.** Average of 5 items is 20 → total = 100.',
+          { en: '**Average = total sum ÷ number of items.**', ur: '**اوسط = کل مجموعہ ÷ اشیاء کی تعداد۔**' },
+          { en: 'Example: average of 10, 20, 30 → (10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.', ur: 'مثال: 10، 20، 30 کی اوسط → (10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20۔' },
+          { en: 'Reverse trick: **total = average × number of items.** Average of 5 items is 20 → total = 100.', ur: 'الٹی ترکیب: **کل مجموعہ = اوسط × تعداد۔** 5 اشیاء کی اوسط 20 → کل = 100۔' },
         ],
         qs: [
           { q: 'The average of 10, 20 and 30 is:', options: ['15', '20', '25', '30'], answer: 1, explain: '(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.' },
@@ -80,9 +80,9 @@ export const practiceDay4 = {
       computer: {
         title: 'Operating systems & shortcuts',
         concept: [
-          'The **operating system (OS)** manages the whole computer. Examples: **Windows, macOS, Linux, Android**.',
-          'Programs like MS Word run ON TOP of the OS — they cannot work without it.',
-          'Key shortcuts: **Ctrl+C** copy · **Ctrl+V** paste · **Ctrl+X** cut · **Ctrl+Z** undo · **Ctrl+S** save · **F1** help.',
+          { en: 'The **operating system (OS)** manages the whole computer. Examples: **Windows, macOS, Linux, Android**.', ur: '**آپریٹنگ سسٹم (OS)** پورا کمپیوٹر چلاتا ہے۔ مثالیں: **ونڈوز، میک او ایس، لینکس، اینڈرائیڈ**۔' },
+          { en: 'Programs like MS Word run ON TOP of the OS — they cannot work without it.', ur: 'ایم ایس ورڈ جیسے پروگرام OS کے اوپر چلتے ہیں — اس کے بغیر کام نہیں کر سکتے۔' },
+          { en: 'Key shortcuts: **Ctrl+C** copy · **Ctrl+V** paste · **Ctrl+X** cut · **Ctrl+Z** undo · **Ctrl+S** save · **F1** help.', ur: 'اہم شارٹ کٹس: **Ctrl+C** کاپی · **Ctrl+V** پیسٹ · **Ctrl+X** کٹ · **Ctrl+Z** انڈو · **Ctrl+S** محفوظ · **F1** مدد۔' },
         ],
         qs: [
           { q: 'Which of these is an operating system?', options: ['MS Word', 'Windows', 'Chrome', 'Photoshop'], answer: 1, explain: 'Windows is an OS; the others are programs that run on an OS.' },

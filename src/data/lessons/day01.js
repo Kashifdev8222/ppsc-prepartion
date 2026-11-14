@@ -44,6 +44,48 @@ export const day01 = {
       note: 'Read this section again tonight in your 10-minute revision slot. Then attempt the quiz below WITHOUT looking at the notes — treat it like the real exam.',
     },
   ],
+  urdu: [
+    {
+      heading: 'بنیادی خیال',
+      paragraphs: [
+        'انگریزی کا ہر لفظ **8 خاندانوں** میں سے کسی ایک سے تعلق رکھتا ہے جنہیں **parts of speech** کہتے ہیں۔ جملے میں لفظ جو کام کرتا ہے وہی بتاتا ہے کہ وہ کس خاندان کا ہے۔ PPSC ٹیسٹ کا تقریباً ہر انگلش سوال سب سے پہلے یہی دیکھتا ہے کہ آپ ان 8 خاندانوں کو پہچانتے ہیں یا نہیں۔',
+      ],
+    },
+    {
+      heading: '8 خاندان (parts of speech)',
+      bullets: [
+        '**Noun (اسم)** — شخص، جگہ، چیز یا خیال کا نام۔ مثالیں: police officer، Lahore، uniform، honesty۔',
+        '**Pronoun (ضمیر)** — اسم کی جگہ استعمال ہوتا ہے تاکہ اسے بار بار نہ دہرانا پڑے۔ مثالیں: he, she, it, they, we, I, you۔ جملہ: "Ali is a constable. **He** works at night." (**He** نے **Ali** کی جگہ لی۔)',
+        '**Verb (فعل)** — کام یا حالت بتانے والا لفظ۔ کام: run، investigate، write۔ حالت: is, am, are, was, were۔',
+        '**Adjective (صفت)** — اسم کی خوبی بیان کرتا ہے۔ جواب دیتا ہے: کون سا؟ کیسا؟ کتنے؟ مثالیں: "the **brave** officer" (بہادر افسر)، "**three** suspects" (تین ملزم)۔',
+        '**Adverb (متعلق فعل)** — فعل، صفت یا کسی اور متعلق فعل کی کیفیت بتاتا ہے۔ عام طور پر جواب: کیسے؟ کب؟ کہاں؟ مثالیں: "He ran **quickly**" (وہ تیزی سے دوڑا)، "**very** brave" (بہت بہادر)۔',
+        '**Preposition** — چھوٹا لفظ جو کسی اسم کا کسی اور چیز کے ساتھ تعلق یا مقام بتاتا ہے۔ مثالیں: in, on, at, under, with, for, by۔ جملہ: "The file is **on** the desk." (فائل میز **پر** ہے۔)',
+        '**Conjunction (حرف عطف)** — جوڑنے والا لفظ۔ مثالیں: and, but, or, because, so۔ جملہ: "He was tired, **but** he completed the report." (وہ تھکا ہوا تھا، **لیکن** اس نے رپورٹ مکمل کی۔)',
+        '**Interjection (حرف فجائیہ)** — اچانک جذبہ ظاہر کرنے والا لفظ، عموماً علامتِ فجائیہ (!) کے ساتھ۔ مثالیں: Alas! Oh! Wow!',
+      ],
+    },
+    {
+      heading: 'فوری پہچان کی ترکیبیں',
+      bullets: [
+        '**صفت کی پہچان:** کیا یہ سامنے والے اسم کی وضاحت کرتا ہے؟ (**brave** officer ✓)',
+        '**متعلق فعل کی پہچان:** کیا یہ فعل کے بارے میں بتاتا ہے کہ کیسے / کب / کہاں؟ (ran **quickly** ✓)',
+        '**Preposition کی پہچان:** کیا اس کے فوراً بعد کوئی اسم آتا ہے؟ (on **the table** ✓)',
+        '**Conjunction کی پہچان:** کیا اسے ہٹانے سے جملہ دو حصوں میں ٹوٹ جاتا ہے؟ (played well … **but** … they lost ✓)',
+      ],
+    },
+    {
+      heading: 'نئے الفاظ سیکھنے کے لیے',
+      bullets: [
+        '**Proper noun** — خاص نام جو بڑے حرف سے لکھا جاتا ہے (Lahore, Quaid-e-Azam, Pakistan)۔',
+        '**Common noun** — عام نام (city, officer, river)۔',
+        'اسم کی تفصیل آپ اگلے پیر (Day 8) کو پڑھیں گے۔',
+      ],
+    },
+    {
+      heading: 'ریویژن نوٹس',
+      note: 'آج رات اپنے 10 منٹ کے ریویژن وقت میں یہ نوٹس دوبارہ پڑھیں۔ پھر نیچے دیا گیا کوئز بغیر نوٹس دیکھے حل کریں — بالکل اصلی امتحان کی طرح۔',
+    },
+  ],
   mcqs: [
     {
       q: '"Lahore is a large city." Which word is an adjective?',

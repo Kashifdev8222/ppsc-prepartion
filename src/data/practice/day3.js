@@ -4,10 +4,10 @@ export const practiceDay3 = {
       english: {
         title: 'Pronouns — the basics',
         concept: [
-          '**Subject pronouns** DO the action: I, we, you, he, she, it, they. — "**She** reads."',
-          '**Object pronouns** RECEIVE the action: me, us, you, him, her, it, them. — "The officer called **him**."',
-          '**Possessive** shows ownership: my/mine, your/yours, his, her/hers, its, our/ours, their/theirs. — "This is **my** file. The file is **mine**."',
-          '**Reflexive** ends in -self/-selves: myself, yourself, himself, herself, itself, ourselves, themselves. — "He hurt **himself**."',
+          { en: '**Subject pronouns** DO the action: I, we, you, he, she, it, they. — "**She** reads."', ur: '**فاعلی ضمیر (subject)** کام کرتی ہے: I, we, you, he, she, it, they۔ — "**She** reads." (وہ پڑھتی ہے۔)' },
+          { en: '**Object pronouns** RECEIVE the action: me, us, you, him, her, it, them. — "The officer called **him**."', ur: '**مفعولی ضمیر (object)** کام قبول کرتی ہے: me, us, you, him, her, it, them۔ — "The officer called **him**." (افسر نے اسے بلایا۔)' },
+          { en: '**Possessive** shows ownership: my/mine, your/yours, his, her/hers, its, our/ours, their/theirs. — "This is **my** file. The file is **mine**."', ur: '**ملکیتی (possessive)** ملکیت بتاتی ہے: my/mine, your/yours, his, her/hers, its, our/ours, their/theirs۔ — "This is **my** file. The file is **mine**."' },
+          { en: '**Reflexive** ends in -self/-selves: myself, yourself, himself, herself, itself, ourselves, themselves. — "He hurt **himself**."', ur: '**Reflexive** آخر میں -self/-selves رکھتی ہے: myself, yourself, himself, herself, itself, ourselves, themselves۔ — "He hurt **himself**." (اس نے خود کو چوٹ لگائی۔)' },
         ],
         qs: [
           { q: '"The officer called ___." (talking about Ali)', options: ['he', 'him', 'his', 'himself'], answer: 1, explain: 'Object position after the verb → "him".' },
@@ -30,9 +30,9 @@ export const practiceDay3 = {
       pakgk: {
         title: 'Pak Studies / GK — Provinces of Pakistan',
         concept: [
-          'Pakistan has **4 provinces**: Punjab (capital **Lahore**), Sindh (**Karachi**), Khyber Pakhtunkhwa (**Peshawar**), Balochistan (**Quetta**).',
-          'Largest by **area**: Balochistan. Largest by **population**: Punjab. Largest **city**: Karachi.',
-          '**Islamabad** is the capital — a federal territory, not a province. **Gilgit-Baltistan** also has a special status, not a full province.',
+          { en: 'Pakistan has **4 provinces**: Punjab (capital **Lahore**), Sindh (**Karachi**), Khyber Pakhtunkhwa (**Peshawar**), Balochistan (**Quetta**).', ur: 'پاکستان کے **4 صوبے** ہیں: پنجاب (دارالحکومت **لاہور**)، سندھ (**کراچی**)، خیبر پختونخوا (**پشاور**)، بلوچستان (**کوئٹہ**)۔' },
+          { en: 'Largest by **area**: Balochistan. Largest by **population**: Punjab. Largest **city**: Karachi.', ur: 'رقبے کے لحاظ سے سب سے بڑا: **بلوچستان**۔ آبادی کے لحاظ سے: **پنجاب**۔ سب سے بڑا شہر: **کراچی**۔' },
+          { en: '**Islamabad** is the capital — a federal territory, not a province. **Gilgit-Baltistan** also has a special status, not a full province.', ur: '**اسلام آباد** دارالحکومت ہے — وفاقی علاقہ، صوبہ نہیں۔ **گلگت بلتستان** کا بھی خاص درجہ ہے، مکمل صوبہ نہیں۔' },
         ],
         qs: [
           { q: 'How many provinces does Pakistan have?', options: ['3', '4', '5', '6'], answer: 1, explain: 'Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan.' },
@@ -55,9 +55,9 @@ export const practiceDay3 = {
       math: {
         title: 'Percentages',
         concept: [
-          '**Percent** means "per 100": 10% of 350 = 350 × 10/100 = 35.',
-          'Quick values: **50% = half**, **25% = quarter**, **75% = three-quarters**, **10% = divide by 10**.',
-          '**Convert fraction → percent:** multiply by 100. 1/4 → 25%, 1/2 → 50%. **Decimal → percent:** multiply by 100. 0.5 → 50%.',
+          { en: '**Percent** means "per 100": 10% of 350 = 350 × 10/100 = 35.', ur: '**فیصد** کا مطلب "فی 100": 10% of 350 = 350 × 10/100 = 35۔' },
+          { en: 'Quick values: **50% = half**, **25% = quarter**, **75% = three-quarters**, **10% = divide by 10**.', ur: 'تیز طریقے: **50% = آدھا**، **25% = چوتھائی**، **75% = تین چوتھائی**، **10% = دس سے تقسیم**۔' },
+          { en: '**Convert fraction → percent:** multiply by 100. 1/4 → 25%, 1/2 → 50%. **Decimal → percent:** multiply by 100. 0.5 → 50%.', ur: '**کسر سے فیصد:** 100 سے ضرب دیں۔ 1/4 → 25%، 1/2 → 50%۔ **اعشاریہ سے فیصد:** 100 سے ضرب دیں۔ 0.5 → 50%۔' },
         ],
         qs: [
           { q: '10% of 350 = ?', options: ['30', '35', '40', '25'], answer: 1, explain: '350 × 10/100 = 35.' },
@@ -80,9 +80,9 @@ export const practiceDay3 = {
       computer: {
         title: 'Memory & storage',
         concept: [
-          'Smallest data unit: **bit** (one 0 or 1). **1 byte = 8 bits**. One letter of text ≈ 1 byte.',
-          'Units in order: **bit → byte → KB → MB → GB → TB** (each step ≈ 1024 times bigger).',
-          '**RAM** = temporary working memory (data lost when power off). **ROM** = permanent, read-only. **Hard disk / SSD / USB** = permanent storage.',
+          { en: 'Smallest data unit: **bit** (one 0 or 1). **1 byte = 8 bits**. One letter of text ≈ 1 byte.', ur: 'سب سے چھوٹی اکائی: **بٹ (bit)** — ایک 0 یا 1۔ **1 بائٹ = 8 بٹس**۔ ایک حرف تقریباً 1 بائٹ۔' },
+          { en: 'Units in order: **bit → byte → KB → MB → GB → TB** (each step ≈ 1024 times bigger).', ur: 'ترتیب: **bit → byte → KB → MB → GB → TB** (ہر قدم تقریباً 1024 گنا بڑا)۔' },
+          { en: '**RAM** = temporary working memory (data lost when power off). **ROM** = permanent, read-only. **Hard disk / SSD / USB** = permanent storage.', ur: '**RAM** = عارضی میموری (بجلی جاتے ہی ڈیٹا ختم)۔ **ROM** = مستقل، صرف پڑھنے کے لیے۔ **ہارڈ ڈسک / SSD / USB** = مستقل اسٹوریج۔' },
         ],
         qs: [
           { q: 'What does RAM stand for?', options: ['Random Access Memory', 'Read All Memory', 'Rapid Access Machine', 'Random Area Memory'], answer: 0, explain: 'RAM = Random Access Memory — temporary working memory.' },

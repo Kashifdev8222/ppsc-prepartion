@@ -94,30 +94,54 @@ export default function LessonPage({ lessonId, onBack }) {
           </div>
         )}
         <h1>{lesson.title}</h1>
-        {lesson.sections.map((s, i) => (
-          <section key={i}>
-            {s.heading && <h2>{s.heading}</h2>}
-            {(s.paragraphs || []).map((p, j) => (
-              <p key={j}>
-                <Rich text={p} />
-              </p>
-            ))}
-            {s.bullets && (
-              <ul>
-                {s.bullets.map((b, j) => (
-                  <li key={j}>
-                    <Rich text={b} />
-                  </li>
+        {lesson.sections.map((s, i) => {
+          const u = (lesson.urdu || [])[i] || null
+          return (
+            <section key={i}>
+              {s.heading && <h2>{s.heading}</h2>}
+              {u && u.heading && <h3 className="ur ur-heading">{u.heading}</h3>}
+              {(s.paragraphs || []).map((p, j) => (
+                <p key={j}>
+                  <Rich text={p} />
+                </p>
+              ))}
+              {u &&
+                (u.paragraphs || []).map((p, j) => (
+                  <p key={`u${j}`} className="ur">
+                    <Rich text={p} />
+                  </p>
                 ))}
-              </ul>
-            )}
-            {s.note && (
-              <div className="note">
-                <Rich text={s.note} />
-              </div>
-            )}
-          </section>
-        ))}
+              {s.bullets && (
+                <ul>
+                  {s.bullets.map((b, j) => (
+                    <li key={j}>
+                      <Rich text={b} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {u && u.bullets && (
+                <ul className="ur">
+                  {u.bullets.map((b, j) => (
+                    <li key={j}>
+                      <Rich text={b} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {s.note && (
+                <div className="note">
+                  <Rich text={s.note} />
+                </div>
+              )}
+              {u && u.note && (
+                <div className="note ur">
+                  <Rich text={u.note} />
+                </div>
+              )}
+            </section>
+          )
+        })}
       </div>
 
       <QuizRunner

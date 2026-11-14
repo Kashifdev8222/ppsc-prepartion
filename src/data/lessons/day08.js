@@ -64,6 +64,68 @@ export const day08 = {
       note: 'Re-read the plural rules and the five pronoun groups tonight. Then attempt the quiz below without looking at the notes.',
     },
   ],
+  urdu: [
+    {
+      heading: 'آج کا مقصد',
+      paragraphs: [
+        'Day 1 میں آپ نے الفاظ کے 8 خاندان سیکھے۔ اب ان دو سب سے عام خاندانوں کی گہرائی میں جاتے ہیں: **nouns (اسم)** اور **pronouns (ضمیر)**۔ PPSC کے ہر انگلش پرچے میں تقریباً 4–6 سوال انہی دو سے آتے ہیں۔',
+      ],
+    },
+    {
+      heading: 'اسموں کی اقسام',
+      bullets: [
+        '**Proper noun** — خاص نام، ہمیشہ بڑے حرف سے: Lahore، Quaid-e-Azam، Ravi۔',
+        '**Common noun** — عام نام: city، officer، river۔',
+        '**Collective noun** — گروہ بطور ایک اکائی: army (فوج)، police (پولیس)، committee (کمیٹی)، team، family۔',
+        '**Abstract noun** — خیال یا خوبی جسے چھوا نہ جا سکے: honesty (ایمانداری)، bravery (بہادری)، freedom (آزادی)، justice (انصاف)۔',
+        '**Concrete noun** — جسے دیکھا یا چھوا جا سکے: table، uniform، road۔',
+        '**Countable** — جنہیں گنا جا سکے: one officer، two officers، three files۔',
+        '**Uncountable** — جنہیں ایک ایک کر کے نہ گنا جا سکے: water، information، advice، furniture۔',
+      ],
+    },
+    {
+      heading: 'واحد اور جمع — امتحان کے پسندیدہ',
+      bullets: [
+        'زیادہ تر اسموں میں **-s** لگتا ہے: book → books، officer → officers۔',
+        'اختتام **s, ss, sh, ch, x, o** پر ہو تو **-es**: box → boxes، watch → watches، hero → heroes۔',
+        'اختتام **-y** پر (consonant کے بعد) → **-ies**: city → cities، army → armies۔ (حرفِ علت کے بعد: boy → boys۔)',
+        'اختتام **-f / -fe** پر → عموماً **-ves**: leaf → leaves، knife → knives۔',
+        '**بے قاعدہ جمع (یاد کریں):** child → children، man → men، woman → women، foot → feet، tooth → teeth، mouse → mice۔',
+        'کچھ اسم واحد اور جمع میں **ایک جیسے** رہتے ہیں: sheep، deer، series۔',
+      ],
+    },
+    {
+      heading: 'ملکیت (apostrophe-s)',
+      bullets: [
+        'واحد: صرف **’s** لگائیں — the officer’s cap (ایک افسر کی ٹوپی)۔',
+        'جمع جو -s پر ختم ہو: صرف **’** — the officers’ caps (کئی افسروں کی ٹوپیاں)۔',
+        'بے قاعدہ جمع: **’s** — the children’s playground، the men’s room۔',
+        'یہاں apostrophe **ملکیت** ظاہر کرتا ہے، جمع نہیں۔',
+      ],
+    },
+    {
+      heading: 'ضمائر — پانچ گروہ جو آپ کو ضرور آنا چاہیے',
+      bullets: [
+        '**فاعلی ضمائر** (کام کرتی ہیں): I, we, you, he, she, it, they۔ — "**They** patrol the city."',
+        '**مفعولی ضمائر** (کام قبول کرتی ہیں): me, us, you, him, her, it, them۔ — "The officer called **him**."',
+        '**ملکیتی صفات** (اسم سے پہلے): my, our, your, his, her, its, their۔ — "This is **my** file."',
+        '**ملکیتی ضمائر** (اکیلی): mine, ours, yours, his, hers, its, theirs۔ — "The file is **mine**."',
+        '**Reflexive** (کام فاعل پر واپس): myself, yourself, himself, herself, itself, ourselves, yourselves, themselves۔ — "He hurt **himself**."',
+        '**Demonstrative** (اشارہ کرتی ہیں): this, that, these, those۔',
+      ],
+    },
+    {
+      heading: 'دو کلاسک امتحانی جال',
+      bullets: [
+        '**جال 1:** **to, for, with, at** کے بعد OBJECT شکل۔ ✓ "The officer gave the file to **him**." ✗ "...to **he**."',
+        '**جال 2:** مرکب فاعل میں SUBJECT شکل۔ ✓ "**Ali and I** are going." ✗ "**Ali and me** are going." (ذہن میں "Ali and" ہٹا کر دیکھیں — آپ کہیں گے "I am going"، "me am going" نہیں۔)',
+      ],
+    },
+    {
+      heading: 'ریویژن نوٹس',
+      note: 'آج رات جمع کے اصول اور ضمائر کے پانچ گروہ دوبارہ پڑھیں۔ پھر نیچے دیا گیا کوئز بغیر نوٹس دیکھے حل کریں۔',
+    },
+  ],
   mcqs: [
     {
       q: 'Which of the following is a collective noun?',

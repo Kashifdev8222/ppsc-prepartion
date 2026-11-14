@@ -8,12 +8,21 @@ import { enrichedDays } from '../data/plan.js'
 function ConceptBox({ items }) {
   return (
     <div className="concept-box">
-      <p className="concept-title">Read first — understand the concept</p>
-      {items.map((c, i) => (
-        <p key={i}>
-          <Rich text={c} />
-        </p>
-      ))}
+      <p className="concept-title">Read first — understand the concept · پہلے پڑھیں</p>
+      {items.map((c, i) => {
+        const en = typeof c === 'string' ? c : c.en
+        const ur = typeof c === 'string' ? null : c.ur
+        return (
+          <p key={i}>
+            <Rich text={en} />
+            {ur && (
+              <span className="ur">
+                <Rich text={ur} />
+              </span>
+            )}
+          </p>
+        )
+      })}
     </div>
   )
 }
@@ -42,8 +51,8 @@ export default function DailyPractice({ day, state }) {
         Steps 2–7 — your six short sessions
       </h2>
       <p className="muted">
-        Each session: read the concept first, then answer 15 questions with instant checking. Only the daily quiz (step
-        1) is saved to your permanent record.
+        Each session: read the concept in English AND Urdu, then answer 15 questions. MCQs stay in English because the
+        real PPSC paper is in English — Urdu is there to help you understand.
       </p>
 
       {day.isTest ? (

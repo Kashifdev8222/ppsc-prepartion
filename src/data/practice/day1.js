@@ -4,10 +4,10 @@ export const practiceDay1 = {
       english: {
         title: 'Articles — a, an, the',
         concept: [
-          'Use **a / an** for ONE thing — not specific, or mentioned for the first time: "I saw **a** man."',
-          '**a** comes before a consonant sound: a book, a car, a university (yu-ni-ver-si-ty starts with a "y" sound).',
-          '**an** comes before a vowel sound: an apple, an hour (the h is silent), an MPA (em-pee-ay).',
-          '**the** is used for something specific, already known, or unique: "**The** sun", "**The** Indus", "**The** Quran".',
+          { en: 'Use **a / an** for ONE thing — not specific, or mentioned for the first time: "I saw **a** man."', ur: '**a / an** کسی ایک چیز کے لیے — جو خاص نہ ہو یا جس کا ذکر پہلی بار ہو رہا ہو: "I saw **a** man." (میں نے ایک آدمی دیکھا۔)' },
+          { en: '**a** comes before a consonant sound: a book, a car, a university (yu-ni-ver-si-ty starts with a "y" sound).', ur: '**a** حرفِ صحیح (consonant) کی آواز سے پہلے آتا ہے: a book، a car، a university ("یو-نی-ورسٹی" کی آواز "y" سے شروع ہوتی ہے)۔' },
+          { en: '**an** comes before a vowel sound: an apple, an hour (the h is silent), an MPA (em-pee-ay).', ur: '**an** حرفِ علت (vowel) کی آواز سے پہلے آتا ہے: an apple، an hour (h خاموش ہے)، an MPA (ایم-پی-اے)۔' },
+          { en: '**the** is used for something specific, already known, or unique: "**The** sun", "**The** Indus", "**The** Quran".', ur: '**the** کسی خاص، پہلے سے معلوم یا یکتا چیز کے لیے: "**The** sun" (سورج)، "**The** Indus" (دریائے سندھ)، "**The** Quran" (قرآن مجید)۔' },
         ],
         qs: [
           { q: '"He is ___ honest man." Which article fits?', options: ['a', 'an', 'the', 'no article'], answer: 1, explain: '"honest" starts with a vowel SOUND (silent h), so "an".' },
@@ -30,10 +30,10 @@ export const practiceDay1 = {
       pakgk: {
         title: 'Pak Studies / GK — Pakistan: basic facts',
         concept: [
-          'Pakistan came into being on **14 August 1947**. Founder: **Quaid-e-Azam Muhammad Ali Jinnah**.',
-          'Capital: **Islamabad**. Four provinces: **Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan**.',
-          'National language: **Urdu**. Official language: **English**.',
-          'National poet: **Allama Iqbal** · National game: **Hockey** · National flower: **Jasmine** · National animal: **Markhor** · National bird: **Chukar**.',
+          { en: 'Pakistan came into being on **14 August 1947**. Founder: **Quaid-e-Azam Muhammad Ali Jinnah**.', ur: 'پاکستان **14 اگست 1947** کو وجود میں آیا۔ بانی: **قائد اعظم محمد علی جناح**۔' },
+          { en: 'Capital: **Islamabad**. Four provinces: **Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan**.', ur: 'دارالحکومت: **اسلام آباد**۔ چار صوبے: **پنجاب، سندھ، خیبر پختونخوا، بلوچستان**۔' },
+          { en: 'National language: **Urdu**. Official language: **English**.', ur: 'قومی زبان: **اردو**۔ سرکاری زبان: **انگریزی**۔' },
+          { en: 'National poet: **Allama Iqbal** · National game: **Hockey** · National flower: **Jasmine** · National animal: **Markhor** · National bird: **Chukar**.', ur: 'قومی شاعر: **علامہ اقبال** · قومی کھیل: **ہاکی** · قومی پھول: **چنبیلی** · قومی جانور: **مارخور** · قومی پرندہ: **چکور**۔' },
         ],
         qs: [
           { q: 'What is the capital of Pakistan?', options: ['Karachi', 'Islamabad', 'Lahore', 'Peshawar'], answer: 1, explain: 'Islamabad is the capital. Karachi was the first capital after independence.' },
@@ -56,9 +56,9 @@ export const practiceDay1 = {
       math: {
         title: 'Basic operations & fractions',
         concept: [
-          'Follow the **BODMAS rule**: solve in this order — Brackets, Orders (powers), Division, Multiplication, Addition, Subtraction.',
-          'A **fraction** is a part of a whole: 1/2 means one part out of two equal parts. Top = numerator, bottom = denominator.',
-          '**Percentage** means "out of 100": 25% = 25/100 = 1/4. So 25% of a number = one quarter of it.',
+          { en: 'Follow the **BODMAS rule**: solve in this order — Brackets, Orders (powers), Division, Multiplication, Addition, Subtraction.', ur: '**BODMAS اصول:** اسی ترتیب سے حل کریں — Brackets (بریکٹ)، Orders (قوتیں)، Division (تقسیم)، Multiplication (ضرب)، Addition (جمع)، Subtraction (تفریق)۔' },
+          { en: 'A **fraction** is a part of a whole: 1/2 means one part out of two equal parts. Top = numerator, bottom = denominator.', ur: '**کسر (fraction)** کسی چیز کا حصہ ہے: 1/2 یعنی دو برابر حصوں میں سے ایک۔ اوپر والا عدد numerator اور نیچے والا denominator کہلاتا ہے۔' },
+          { en: '**Percentage** means "out of 100": 25% = 25/100 = 1/4. So 25% of a number = one quarter of it.', ur: '**فیصد** کا مطلب ہے "100 میں سے": 25% = 25/100 = 1/4۔ یعنی کسی عدد کا 25% اس کا چوتھائی حصہ ہے۔' },
         ],
         qs: [
           { q: 'What is 25% of 200?', options: ['25', '50', '75', '100'], answer: 1, explain: '25% = 1/4, and 200 ÷ 4 = 50.' },
@@ -81,9 +81,9 @@ export const practiceDay1 = {
       computer: {
         title: 'Computer fundamentals',
         concept: [
-          'A computer works in three steps: **Input → Process → Output**. You type (input), the CPU works (process), the screen shows (output).',
-          '**Hardware** = physical parts you can touch (keyboard, CPU, monitor). **Software** = programs (Windows, MS Word).',
-          '**CPU** (Central Processing Unit) = the brain of the computer. **RAM** = temporary working memory. **Hard disk** = permanent storage.',
+          { en: 'A computer works in three steps: **Input → Process → Output**. You type (input), the CPU works (process), the screen shows (output).', ur: 'کمپیوٹر تین مراحل میں کام کرتا ہے: **ان پٹ → پراسیس → آؤٹ پٹ**۔ آپ ٹائپ کرتے ہیں (ان پٹ)، CPU کام کرتا ہے (پراسیس)، اسکرین دکھاتی ہے (آؤٹ پٹ)۔' },
+          { en: '**Hardware** = physical parts you can touch (keyboard, CPU, monitor). **Software** = programs (Windows, MS Word).', ur: '**ہارڈویئر** = وہ پرزے جنہیں چھو سکتے ہیں (کی بورڈ، CPU، مانیٹر)۔ **سافٹ ویئر** = پروگرام (ونڈوز، ایم ایس ورڈ)۔' },
+          { en: '**CPU** (Central Processing Unit) = the brain of the computer. **RAM** = temporary working memory. **Hard disk** = permanent storage.', ur: '**CPU** (سنٹرل پراسیسنگ یونٹ) = کمپیوٹر کا دماغ۔ **RAM** = عارضی میموری۔ **ہارڈ ڈسک** = مستقل اسٹوریج۔' },
         ],
         qs: [
           { q: 'What does CPU stand for?', options: ['Central Processing Unit', 'Computer Personal Unit', 'Central Program Utility', 'Control Processing Unit'], answer: 0, explain: 'CPU = Central Processing Unit — the brain of the computer.' },

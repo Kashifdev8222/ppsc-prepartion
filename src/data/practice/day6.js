@@ -4,10 +4,10 @@ export const practiceDay6 = {
       english: {
         title: 'Sentence correction',
         concept: [
-          '**Subject-verb agreement:** he/she/it takes the verb with -s in the present: "He **goes**", "She **works**". I/you/we/they stay plain: "They **go**".',
-          '**Doesn’t** goes with he/she/it. **Don’t** goes with I/you/we/they.',
-          '**Are** with plurals (they, we, children, police). **Is** with singulars (he, she, it).',
-          'Remember: "police" takes a PLURAL verb in English — "The police **are** patrolling."',
+          { en: '**Subject-verb agreement:** he/she/it takes the verb with -s in the present: "He **goes**", "She **works**". I/you/we/they stay plain: "They **go**".', ur: '**فاعل اور فعل کا میل:** he/she/it کے ساتھ present میں فعل کے آخر میں -s آتا ہے: "He **goes**"، "She **works**"۔ I/you/we/they عام رہتے ہیں: "They **go**"۔' },
+          { en: '**Doesn’t** goes with he/she/it. **Don’t** goes with I/you/we/they.', ur: '**Doesn’t** صرف he/she/it کے ساتھ۔ **Don’t** I/you/we/they کے ساتھ۔' },
+          { en: '**Are** with plurals (they, we, children, police). **Is** with singulars (he, she, it).', ur: '**Are** جمع کے ساتھ (they, we, children, police)۔ **Is** واحد کے ساتھ (he, she, it)۔' },
+          { en: 'Remember: "police" takes a PLURAL verb in English — "The police **are** patrolling."', ur: 'یاد رکھیں: انگریزی میں "police" جمع فعل لیتا ہے — "The police **are** patrolling."' },
         ],
         qs: [
           { q: 'Choose the correct sentence:', options: ['He go to school.', 'He goes to school.', 'He going to school.', 'He gone to school.'], answer: 1, explain: 'He/she/it + -s in the present: he goes.' },
@@ -30,10 +30,10 @@ export const practiceDay6 = {
       pakgk: {
         title: 'Pak Studies / GK — Islamic basics',
         concept: [
-          'First prophet: **Adam (AS)**. Last prophet: **Muhammad (PBUH)** — born in **Makkah, 571 AD**.',
-          'First revelation: **Cave of Hira**, **610 AD**. **Hijrat** (migration) to Madina: **622 AD** — start of the Islamic calendar.',
-          'The Quran has **114 surahs**. The first caliph after the Prophet (PBUH) was **Abu Bakr (RA)**.',
-          'Five pillars: **Shahada** (faith) · **Salat** (5 daily prayers) · **Zakat** (2.5%) · **Sawm** (Ramadan fast) · **Hajj**.',
+          { en: 'First prophet: **Adam (AS)**. Last prophet: **Muhammad (PBUH)** — born in **Makkah, 571 AD**.', ur: 'پہلے نبی: **حضرت آدم (علیہ السلام)**۔ آخری نبی: **حضرت محمد (صلی اللہ علیہ وسلم)** — پیدائش **مکہ، 571 عیسوی**۔' },
+          { en: 'First revelation: **Cave of Hira**, **610 AD**. **Hijrat** (migration) to Madina: **622 AD** — start of the Islamic calendar.', ur: 'پہلی وحی: **غارِ حرا**، **610 عیسوی**۔ **ہجرت** مدینہ: **622 عیسوی** — اسلامی کیلنڈر کا آغاز۔' },
+          { en: 'The Quran has **114 surahs**. The first caliph after the Prophet (PBUH) was **Abu Bakr (RA)**.', ur: 'قرآن مجید کی **114 سورتیں** ہیں۔ نبی کریم (ﷺ) کے بعد پہلے خلیفہ **حضرت ابوبکر صدیق (رضی اللہ عنہ)**۔' },
+          { en: 'Five pillars: **Shahada** (faith) · **Salat** (5 daily prayers) · **Zakat** (2.5%) · **Sawm** (Ramadan fast) · **Hajj**.', ur: 'پانچ ارکان: **شہادت** · **نماز** (5 وقت) · **زکوٰۃ** (2.5%) · **روزہ** (رمضان) · **حج**۔' },
         ],
         qs: [
           { q: 'Who was the first prophet of Allah?', options: ['Ibrahim (AS)', 'Adam (AS)', 'Musa (AS)', 'Isa (AS)'], answer: 1, explain: 'Adam (AS) — the first human and first prophet.' },
@@ -56,9 +56,9 @@ export const practiceDay6 = {
       math: {
         title: 'Reasoning — number series',
         concept: [
-          '**Find the pattern first** — is the series adding, subtracting, multiplying or dividing?',
-          '2, 4, 6, 8 → adds 2 each time. 3, 6, 12, 24 → doubles each time.',
-          'Special patterns: squares (1, 4, 9, 16, 25), primes (2, 3, 5, 7, 11), Fibonacci (1, 1, 2, 3, 5, 8).',
+          { en: '**Find the pattern first** — is the series adding, subtracting, multiplying or dividing?', ur: '**پہلے پیٹرن تلاش کریں** — سیریز جمع، تفریق، ضرب یا تقسیم میں سے کون سا عمل کر رہی ہے؟' },
+          { en: '2, 4, 6, 8 → adds 2 each time. 3, 6, 12, 24 → doubles each time.', ur: '2, 4, 6, 8 → ہر بار 2 جمع۔ 3, 6, 12, 24 → ہر بار دوگنا۔' },
+          { en: 'Special patterns: squares (1, 4, 9, 16, 25), primes (2, 3, 5, 7, 11), Fibonacci (1, 1, 2, 3, 5, 8).', ur: 'خاص پیٹرن: مربع (1, 4, 9, 16, 25)، مفرد اعداد (2, 3, 5, 7, 11)، فبوناچی (1, 1, 2, 3, 5, 8)۔' },
         ],
         qs: [
           { q: 'Next number: 2, 4, 6, 8, ___?', options: ['9', '10', '12', '11'], answer: 1, explain: 'Adds 2 each time: 8 + 2 = 10.' },
@@ -81,10 +81,10 @@ export const practiceDay6 = {
       computer: {
         title: 'Internet basics',
         concept: [
-          '**WWW** = World Wide Web — the collection of pages on the internet.',
-          'A **browser** (Chrome, Firefox) opens websites. A **search engine** (Google) finds them.',
-          '**Email** = electronic mail. **URL** = a website’s address (like www.ppssc.gop.pk). **ISP** = the company that gives you internet.',
-          '**Wi-Fi** = wireless internet. **https** = secure connection. **Download** = receiving data, **Upload** = sending data.',
+          { en: '**WWW** = World Wide Web — the collection of pages on the internet.', ur: '**WWW** = ورلڈ وائیڈ ویب — انٹرنیٹ پر موجود صفحات کا مجموعہ۔' },
+          { en: 'A **browser** (Chrome, Firefox) opens websites. A **search engine** (Google) finds them.', ur: '**براؤزر** (کروم، فائر فاکس) ویب سائٹیں کھولتا ہے۔ **سرچ انجن** (گوگل) انہیں ڈھونڈتا ہے۔' },
+          { en: '**Email** = electronic mail. **URL** = a website’s address (like www.ppssc.gop.pk). **ISP** = the company that gives you internet.', ur: '**ای میل** = الیکٹرانک میل۔ **URL** = ویب سائٹ کا پتہ (جیسے www.ppssc.gop.pk)۔ **ISP** = انٹرنیٹ فراہم کرنے والی کمپنی۔' },
+          { en: '**Wi-Fi** = wireless internet. **https** = secure connection. **Download** = receiving data, **Upload** = sending data.', ur: '**وائی فائی** = بے تار انٹرنیٹ۔ **https** = محفوظ کنکشن۔ **ڈاؤن لوڈ** = ڈیٹا لینا، **اپ لوڈ** = ڈیٹا بھیجنا۔' },
         ],
         qs: [
           { q: 'What does WWW stand for?', options: ['World Wide Web', 'World Web Wide', 'Wide World Web', 'Web World Wide'], answer: 0, explain: 'WWW = World Wide Web.' },

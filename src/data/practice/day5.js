@@ -4,9 +4,9 @@ export const practiceDay5 = {
       english: {
         title: 'Antonyms — opposite meaning',
         concept: [
-          'An **antonym** is a word with the OPPOSITE meaning.',
-          'Learn them in pairs: hot ↔ cold, easy ↔ difficult, always ↔ never, day ↔ night, rich ↔ poor.',
-          'Exam trick: if two options are similar to each other, the answer is usually the one that is truly opposite.',
+          { en: 'An **antonym** is a word with the OPPOSITE meaning.', ur: '**Antonym** ایسا لفظ جس کا مطلب الٹ (مخالف) ہو۔' },
+          { en: 'Learn them in pairs: hot ↔ cold, easy ↔ difficult, always ↔ never, day ↔ night, rich ↔ poor.', ur: 'جوڑوں میں یاد کریں: hot ↔ cold، easy ↔ difficult، always ↔ never، day ↔ night، rich ↔ poor۔' },
+          { en: 'Exam trick: if two options are similar to each other, the answer is usually the one that is truly opposite.', ur: 'امتحانی ترکیب: اگر دو آپشنز آپس میں ملتے جلتے ہوں تو جواب وہی ہوتا ہے جو واقعی الٹ معنی رکھتا ہو۔' },
         ],
         qs: [
           { q: 'The antonym of "hot" is:', options: ['warm', 'cold', 'cool', 'fire'], answer: 1, explain: 'Hot ↔ cold. Warm and cool are milder forms.' },
@@ -29,10 +29,10 @@ export const practiceDay5 = {
       pakgk: {
         title: 'General Knowledge — the world',
         concept: [
-          '**United Nations (UN):** headquarters **New York**, about 193 member countries. Security Council has **5 permanent members**.',
-          '**Continents (7):** Asia (largest), Africa, Europe, North America, South America, Australia (Oceania), Antarctica.',
-          'Largest country by area: **Russia**. Most populous country: **India**. Largest ocean: **Pacific**.',
-          '**OIC** (Organization of Islamic Cooperation) was founded in **1969**; Pakistan is a founding member. **Red Cross** was founded by Henry Dunant.',
+          { en: '**United Nations (UN):** headquarters **New York**, about 193 member countries. Security Council has **5 permanent members**.', ur: '**اقوام متحدہ (UN):** صدر دفتر **نیویارک**، تقریباً 193 رکن ممالک۔ سلامتی کونسل کے **5 مستقل ارکان**۔' },
+          { en: '**Continents (7):** Asia (largest), Africa, Europe, North America, South America, Australia (Oceania), Antarctica.', ur: '**براعظم (7):** ایشیا (سب سے بڑا)، افریقہ، یورپ، شمالی امریکہ، جنوبی امریکہ، آسٹریلیا، انٹارکٹیکا۔' },
+          { en: 'Largest country by area: **Russia**. Most populous country: **India**. Largest ocean: **Pacific**.', ur: 'رقبے میں سب سے بڑا ملک: **روس**۔ سب سے زیادہ آبادی: **انڈیا**۔ سب سے بڑا سمندر: **بحرالکاہل (Pacific)**۔' },
+          { en: '**OIC** (Organization of Islamic Cooperation) was founded in **1969**; Pakistan is a founding member. **Red Cross** was founded by Henry Dunant.', ur: '**او آئی سی** (اسلامی تعاون تنظیم) **1969** میں قائم ہوئی؛ پاکستان بانی رکن ہے۔ **ریڈ کراس** ہنری ڈونانٹ نے قائم کی۔' },
         ],
         qs: [
           { q: 'The headquarters of the United Nations is in:', options: ['Geneva', 'New York', 'London', 'Paris'], answer: 1, explain: 'UN headquarters: New York, USA.' },
@@ -55,10 +55,10 @@ export const practiceDay5 = {
       math: {
         title: 'Fractions',
         concept: [
-          'A fraction has a **numerator** (top) and **denominator** (bottom).',
-          '**Adding fractions:** make denominators equal first — 1/2 + 1/3 = 3/6 + 2/6 = 5/6.',
-          '**Simplifying:** divide top and bottom by the same number — 2/4 = 1/2, 5/10 = 1/2.',
-          '**Comparing:** bigger denominator (bottom) = smaller piece — 1/2 is bigger than 1/3.',
+          { en: 'A fraction has a **numerator** (top) and **denominator** (bottom).', ur: 'کسر کے اوپر والا عدد **numerator** اور نیچے والا **denominator** کہلاتا ہے۔' },
+          { en: '**Adding fractions:** make denominators equal first — 1/2 + 1/3 = 3/6 + 2/6 = 5/6.', ur: '**کسر جمع کرنا:** پہلے denominators برابر کریں — 1/2 + 1/3 = 3/6 + 2/6 = 5/6۔' },
+          { en: '**Simplifying:** divide top and bottom by the same number — 2/4 = 1/2, 5/10 = 1/2.', ur: '**مختصر کرنا:** دونوں کو ایک ہی عدد سے تقسیم کریں — 2/4 = 1/2، 5/10 = 1/2۔' },
+          { en: '**Comparing:** bigger denominator (bottom) = smaller piece — 1/2 is bigger than 1/3.', ur: '**موازنہ:** نیچے والا عدد (denominator) جتنا بڑا، ٹکڑا اتنا چھوٹا — 1/2 بڑا ہے 1/3 سے۔' },
         ],
         qs: [
           { q: '1/3 of 90 = ?', options: ['20', '30', '40', '45'], answer: 1, explain: '90 ÷ 3 = 30.' },
@@ -81,9 +81,9 @@ export const practiceDay5 = {
       computer: {
         title: 'MS Office',
         concept: [
-          '**MS Word** = documents and letters (.docx). **MS Excel** = spreadsheets, tables and formulas (.xlsx). **MS PowerPoint** = presentations (.pptx).',
-          '**Outlook** = email. **Access** = databases.',
-          'Formatting shortcuts: **Ctrl+B** bold · **Ctrl+I** italic · **Ctrl+P** print.',
+          { en: '**MS Word** = documents and letters (.docx). **MS Excel** = spreadsheets, tables and formulas (.xlsx). **MS PowerPoint** = presentations (.pptx).', ur: '**ایم ایس ورڈ** = دستاویزات اور خطوط (.docx)۔ **ایم ایس ایکسل** = جدول اور فارمولے (.xlsx)۔ **ایم ایس پاورپوائنٹ** = پریزنٹیشنز (.pptx)۔' },
+          { en: '**Outlook** = email. **Access** = databases.', ur: '**آؤٹ لک** = ای میل۔ **ایکسیس** = ڈیٹا بیس۔' },
+          { en: 'Formatting shortcuts: **Ctrl+B** bold · **Ctrl+I** italic · **Ctrl+P** print.', ur: 'فارمیٹنگ شارٹ کٹس: **Ctrl+B** موٹا · **Ctrl+I** ترچھا · **Ctrl+P** پرنٹ۔' },
         ],
         qs: [
           { q: 'Which MS Office program is used for documents?', options: ['Excel', 'Word', 'PowerPoint', 'Access'], answer: 1, explain: 'MS Word = documents and letters.' },
