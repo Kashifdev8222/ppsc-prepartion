@@ -1,0 +1,157 @@
+export const day02 = {
+  id: 'day02',
+  week: 1,
+  title: 'Pakistan Movement — Overview',
+  sections: [
+    {
+      heading: 'Today’s goal',
+      paragraphs: [
+        'Welcome to your first Pakistan Studies lesson. PPSC papers love **dates, leaders and events** from the Pakistan Movement. Do not memorise the list — read it like a story, in order. Once the story is in your head, the dates come naturally.',
+      ],
+    },
+    {
+      heading: 'The idea of Pakistan (in 3 steps)',
+      bullets: [
+        '**Step 1 — Sir Syed Ahmed Khan** (1817–1898): after 1857, he taught Muslims to get modern education. He founded **MAO College, Aligarh** in **1875** — the starting point of Muslim awakening.',
+        '**Step 2 — Allama Iqbal**: in the **Allahabad Address (1930)** he openly said the Muslims of India should have a separate state in the north-west.',
+        '**Step 3 — Chaudhry Rahmat Ali**: in the pamphlet **"Now or Never" (1933)** he proposed the name **PAKISTAN** — from Punjab, Afghania (NWFP), Kashmir, Sindh and BaluchisTAN.',
+      ],
+    },
+    {
+      heading: 'The story in order — key events',
+      bullets: [
+        '**1857** — War of Independence; the British take direct control of India.',
+        '**1875** — Sir Syed Ahmed Khan founds MAO College, Aligarh.',
+        '**1885** — Indian National Congress is founded.',
+        '**1906** — **All-India Muslim League** founded in **Dhaka**. First president: **Sir Aga Khan III**.',
+        '**1909** — Minto-Morley Reforms: Muslims get **separate electorates** (vote for their own candidates).',
+        '**1916** — **Lucknow Pact**: Congress and Muslim League agree to work together.',
+        '**1919** — **Khilafat Movement** launched.',
+        '**1929** — Quaid-e-Azam presents his **Fourteen Points** (reply to the 1928 Nehru Report).',
+        '**1930** — Allama Iqbal’s **Allahabad Address**: the idea of a separate Muslim state.',
+        '**1933** — Chaudhry Rahmat Ali publishes **"Now or Never"**, proposes the name **Pakistan**.',
+        '**1937** — Provincial elections: Congress wins a big majority; in **1939** Congress ministries resign.',
+        '**1940** — **23 March: Lahore Resolution** passed at **Minto Park**, Lahore — Muslims demand a separate homeland. (Minar-e-Pakistan stands at this spot today.)',
+        '**1946** — Elections + Cabinet Mission Plan.',
+        '**1947** — **3 June Plan** announces partition. **14 August: Pakistan comes into being.** Quaid-e-Azam becomes the first **Governor-General**; **Liaquat Ali Khan** becomes the first **Prime Minister**.',
+      ],
+    },
+    {
+      heading: 'Key personalities — one line each',
+      bullets: [
+        '**Sir Syed Ahmed Khan** — education first; Aligarh Movement.',
+        '**Allama Iqbal** — poet-philosopher; first clear demand for a separate state (1930).',
+        '**Quaid-e-Azam Muhammad Ali Jinnah** — leader of the Pakistan Movement; first Governor-General.',
+        '**Liaquat Ali Khan** — Quaid’s right hand; first Prime Minister.',
+        '**Chaudhry Rahmat Ali** — gave the name "Pakistan".',
+        '**Fatima Jinnah** — Madar-e-Millat; stood with the Quaid throughout.',
+      ],
+    },
+    {
+      heading: 'New words explained',
+      bullets: [
+        '**Resolution (قرارداد)** — a formal written decision or demand.',
+        '**Separate electorates** — a system where Muslims vote for Muslim candidates only.',
+        '**Partition (تقسیم)** — division of India into two countries in 1947.',
+        '**Governor-General** — the head of the state in Pakistan before the first constitution (1947–1956).',
+        '**Pamphlet** — a small printed booklet written to spread an idea.',
+      ],
+    },
+    {
+      heading: 'Revision notes',
+      note: 'Tonight, close this page and write the timeline from memory on paper — 1857 → 1875 → 1885 → 1906 → 1909 → 1916 → 1919 → 1929 → 1930 → 1933 → 1940 → 1947. Then attempt the quiz below without looking.',
+    },
+  ],
+  mcqs: [
+    {
+      q: 'Who presented the Allahabad Address in 1930?',
+      options: ['Quaid-e-Azam Muhammad Ali Jinnah', 'Allama Iqbal', 'Sir Syed Ahmed Khan', 'Liaquat Ali Khan'],
+      answer: 1,
+      explain: 'Allama Iqbal delivered the famous Allahabad Address in 1930, in which he proposed a separate state for the Muslims of north-west India.',
+    },
+    {
+      q: 'Who coined the name "Pakistan"?',
+      options: ['Allama Iqbal', 'Quaid-e-Azam', 'Chaudhry Rahmat Ali', 'Sir Syed Ahmed Khan'],
+      answer: 2,
+      explain: 'Chaudhry Rahmat Ali proposed the name "Pakistan" in his 1933 pamphlet "Now or Never".',
+    },
+    {
+      q: 'The Lahore Resolution was passed in which year?',
+      options: ['1930', '1940', '1946', '1947'],
+      answer: 1,
+      explain: 'The Lahore Resolution was passed on 23 March 1940 — the day Pakistanis celebrate Pakistan Day.',
+    },
+    {
+      q: 'Where was the Lahore Resolution passed?',
+      options: ['Shalimar Gardens', 'Minto Park', 'Badshahi Mosque', 'Lahore Fort'],
+      answer: 1,
+      explain: 'It was passed at Minto Park, Lahore — where Minar-e-Pakistan stands today.',
+    },
+    {
+      q: 'The All-India Muslim League was founded in:',
+      options: ['1885', '1906', '1909', '1940'],
+      answer: 1,
+      explain: 'The Muslim League was founded in 1906 in Dhaka to protect the political rights of Muslims.',
+    },
+    {
+      q: 'The first president of the All-India Muslim League was:',
+      options: ['Sir Syed Ahmed Khan', 'Sir Aga Khan III', 'Quaid-e-Azam', 'Allama Iqbal'],
+      answer: 1,
+      explain: 'Sir Aga Khan III was the first president of the Muslim League (1906).',
+    },
+    {
+      q: 'Sir Syed Ahmed Khan founded:',
+      options: ['MAO College, Aligarh', 'Punjab University', 'Islamia College, Peshawar', 'Sindh Madressah'],
+      answer: 0,
+      explain: 'Sir Syed founded the Muhammadan Anglo-Oriental (MAO) College at Aligarh in 1875 — later Aligarh Muslim University.',
+    },
+    {
+      q: 'The partition plan of 1947 is called:',
+      options: ['Cabinet Mission Plan', '3rd June Plan', 'Lucknow Plan', 'Delhi Plan'],
+      answer: 1,
+      explain: 'The 3rd June Plan (1947) announced the partition of India and the creation of Pakistan.',
+    },
+    {
+      q: 'The pamphlet "Now or Never" (1933) was written by:',
+      options: ['Allama Iqbal', 'Quaid-e-Azam', 'Chaudhry Rahmat Ali', 'Sir Aga Khan'],
+      answer: 2,
+      explain: 'Chaudhry Rahmat Ali wrote "Now or Never", which first proposed the name Pakistan.',
+    },
+    {
+      q: 'After winning the 1937 elections, Congress ministries resigned in:',
+      options: ['1937', '1938', '1939', '1940'],
+      answer: 2,
+      explain: 'Congress ministries resigned in 1939 in protest against British war policy — Muslims observed it as a "Day of Deliverance".',
+    },
+    {
+      q: 'The Lucknow Pact (1916) was an agreement between:',
+      options: ['Congress and Muslim League', 'Congress and the British', 'Muslim League and the British', 'Hindu Mahasabha and Congress'],
+      answer: 0,
+      explain: 'The Lucknow Pact was a joint agreement between the Congress and the Muslim League for constitutional reforms.',
+    },
+    {
+      q: 'Quaid-e-Azam presented his Fourteen Points in:',
+      options: ['1928', '1929', '1930', '1940'],
+      answer: 1,
+      explain: 'The Fourteen Points (1929) were Quaid-e-Azam’s reply to the Nehru Report, protecting Muslim rights.',
+    },
+    {
+      q: 'The first Governor-General of Pakistan was:',
+      options: ['Quaid-e-Azam Muhammad Ali Jinnah', 'Liaquat Ali Khan', 'Khawaja Nazimuddin', 'Lord Mountbatten'],
+      answer: 0,
+      explain: 'Quaid-e-Azam Muhammad Ali Jinnah became Pakistan’s first Governor-General on 14 August 1947.',
+    },
+    {
+      q: 'The first Prime Minister of Pakistan was:',
+      options: ['Quaid-e-Azam', 'Liaquat Ali Khan', 'Khawaja Nazimuddin', 'Sir Aga Khan'],
+      answer: 1,
+      explain: 'Liaquat Ali Khan became the first Prime Minister of Pakistan in 1947.',
+    },
+    {
+      q: 'The Khilafat Movement was launched in:',
+      options: ['1914', '1919', '1922', '1930'],
+      answer: 1,
+      explain: 'The Khilafat Movement was launched in 1919 to protect the Ottoman Caliphate after World War I.',
+    },
+  ],
+}
